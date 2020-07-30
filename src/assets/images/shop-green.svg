@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101.68282" height="101.68282" viewBox="0 0 101.68282 101.68282">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="50.84141" x2="101.68282" y2="50.84141" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006837"/>
+      <stop offset="0.2591" stop-color="#00773c"/>
+      <stop offset="0.7006" stop-color="#008b43"/>
+      <stop offset="1" stop-color="#009245"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="WEBSHOP">
+      <g>
+        <circle class="cls-1" cx="50.84141" cy="50.84141" r="50.84141"/>
+        <path class="cls-2" d="M78.033,44.52028a2.26412,2.26412,0,0,0-1.86429-.93214H64.98289V42.48121a14.157,14.157,0,1,0-28.314,0v1.10693H25.48313a2.34543,2.34543,0,0,0-1.8643.93214,2.31257,2.31257,0,0,0-.34956,2.03908l4.83552,15.67173A15.80261,15.80261,0,0,0,43.19394,73.35861H58.45786A15.80259,15.80259,0,0,0,73.547,62.23109l4.89378-15.67174A2.3353,2.3353,0,0,0,78.033,44.52028Zm-34.839-2.03907a7.632,7.632,0,0,1,15.26392,0v1.10693H43.19394Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

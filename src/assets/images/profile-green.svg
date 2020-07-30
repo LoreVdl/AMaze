@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101.96072" height="101.96072" viewBox="0 0 101.96072 101.96072">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="50.98036" x2="101.96072" y2="50.98036" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006837"/>
+      <stop offset="0.2591" stop-color="#00773c"/>
+      <stop offset="0.7006" stop-color="#008b43"/>
+      <stop offset="1" stop-color="#009245"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="OVER_ONS" data-name="OVER ONS">
+      <g>
+        <circle class="cls-1" cx="50.98036" cy="50.98036" r="50.98036"/>
+        <g>
+          <path class="cls-2" d="M64.21554,37.17474A13.23518,13.23518,0,1,0,50.98036,50.40992,13.27409,13.27409,0,0,0,64.21554,37.17474Z"/>
+          <path class="cls-2" d="M56.21427,53.17727a16.6836,16.6836,0,0,1-10.46782,0,13.45317,13.45317,0,0,0-14.679,3.97055,18.53486,18.53486,0,0,0-4.151,11.671,4.44179,4.44179,0,0,0,4.45183,4.45183H70.59248a4.44178,4.44178,0,0,0,4.45183-4.45183,18.5348,18.5348,0,0,0-4.151-11.671A13.48144,13.48144,0,0,0,56.21427,53.17727Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

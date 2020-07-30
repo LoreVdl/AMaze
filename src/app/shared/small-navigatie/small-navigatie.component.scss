@@ -1,0 +1,24 @@
+:host {
+  position: fixed;
+  right: (1.0416666666666665% + 1.0416666666666665% + 2.12688548126% + 2.12688548126%);
+  top: 0;
+  width: 5%;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  grid-column: 27 / span 2;
+
+  &__button {
+    cursor: pointer;
+    margin: 20% 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}

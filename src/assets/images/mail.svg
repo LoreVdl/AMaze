@@ -1,0 +1,17 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 41.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#A_Maze_groen);
+      }
+    </style>
+    <linearGradient id="A_Maze_groen" data-name="A Maze groen" x1="13.77" y1="26.8546" x2="77.77" y2="26.8546" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006837"/>
+      <stop offset="0.25906" stop-color="#00773c"/>
+      <stop offset="0.70058" stop-color="#008b43"/>
+      <stop offset="1" stop-color="#009245"/>
+    </linearGradient>
+  </defs>
+  <title>mail</title>
+  <path class="cls-1" d="M45.77,28.4946,18,6.2846H73.54Zm1.43,4.72a2.29,2.29,0,0,1-2.86,0L13.77,8.7546v36.6a2.07,2.07,0,0,0,2.07,2.07H75.7a2.07,2.07,0,0,0,2.07-2.07v-36.6Z" transform="translate(-13.77 -6.2846)"/>
+</svg>

@@ -1,0 +1,67 @@
+<div class="body" id="home">
+  <app-navigatie (scrollEvent)="scroll($event)"></app-navigatie>
+</div>
+
+<div class="body l-wrap" id="about">
+  <div class="framework">
+    <div class="frame">
+
+    </div>
+
+    <div class="about-list">
+      <img src="../../assets/images/projects-list.svg">
+      <p class="frame__text">Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voorgaan. We werken mee aan puzzels voor escape rooms,
+        we bouwen gepersonaliseerde spelen voor particulieren en bedrijven en brengen ook zelf puzzels uit voor een avond vol spelplezier.
+        Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voorgaan. We werken mee aan puzzels voor escape rooms,
+        we bouwen gepersonaliseerde spelen voor particulieren en bedrijven en brengen ook zelf puzzels uit voor een avond vol spelplezier.
+      </p>
+    </div>
+  </div>
+  <app-small-navigatie class="two-col-grid small-nav" (scrollEvent)="scroll($event)"></app-small-navigatie>
+</div>
+
+<div class="body l-wrap" id="projects">
+  <div class="projects-list">
+    <div class="projects-list__project" *ngFor="let project of projects">
+      <img src="{{project.imageUrl}}" />
+    </div>
+  </div>
+</div>
+
+
+<div class="body l-wrap" id="shop">
+</div>
+
+<div class="body l-wrap" id="contact">
+  <div class="contact" [formGroup]="formData">
+    <div class="form">
+      <div class="form__name">
+        <input type="text" placeholder="Naam" formControlName="fullname">
+      </div>
+      <div class="form__mail">
+        <input type="text" placeholder="Email" formControlName="email">
+      </div>
+    </div>
+    <div class="gegevens">
+      <div class="gegevens__number">
+        <p class="gegevens__email">Welcome@a-maze.be</p>
+        <div class="gegevens__detail">
+          <p>Ruben Van der Meirsch</p>
+          <p>+32 499 76 43 45</p>
+        </div>
+        <div class="gegevens__detail">
+          <p>Lore Vanderlinden</p>
+          <p>+32 499 33 44 78</p>
+        </div>
+      </div>
+      <div class="gegevens__input">
+        <div class="textarea">
+          <textarea placeholder="Jouw geweldig voorstel..." formControlName="comment"></textarea>
+        </div>
+        <div class="gegevens__button">
+          <button class="button" [disabled]="!formData.valid">Verzenden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

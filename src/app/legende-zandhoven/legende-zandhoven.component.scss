@@ -1,0 +1,136 @@
+@font-face {
+  font-family: arthur;
+  src: url("../../assets/fonts/KingArthurLegend.ttf");
+}
+
+@font-face {
+  font-family: vinchand;
+  src: url("../../assets/fonts/vinchand.ttf");
+}
+
+@font-face {
+  font-family: wisdom;
+  src: url("../../assets/fonts/wisdom.ttf");
+}
+
+html {
+  background-color: #cecece;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.body {
+  background-image: url("../../assets/images/bg-min.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.splash {
+  img {
+    max-width: 100%;
+  }
+
+  &__one {
+    bottom: 0;
+    position: absolute;
+    right: 120px;
+  }
+
+  &__two {
+    top: -30px;
+    position: absolute;
+    right: 30px;
+  }
+
+  &__three {
+    top: 45%;
+    left: -13%;
+    position: absolute;
+  }
+}
+
+.title {
+  color: #000;
+  font-family: arthur;
+  font-size: 4.2em;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.extra-title {
+  color: #000;
+  cursor: pointer;
+  font-family: wisdom;
+  font-size: 2em;
+  text-align: end;
+}
+
+.logo {
+  margin-left: 10px;
+  width: 5%;
+}
+
+.button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  margin-left: -30px;
+}
+
+.subtitle {
+  align-items: center;
+  color: #000;
+  display: flex;
+  font-family: vinchand;
+  font-size: 3.5em;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 959px) {
+  .title {
+    font-size: 3.2em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .splash img {
+    display: none;
+  }
+
+  .title {
+    font-size: 3.3em;
+    margin-top: 7rem;
+    margin-bottom: 10px;
+  }
+
+  .extra-title {
+    font-size: 1em;
+  }
+
+  .logo {
+    margin-left: 5px;
+    width: 8%;
+  }
+
+  .button img {
+    width: 180px;
+  }
+
+  .subtitle {
+    font-size: 1.9em;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .title {
+    font-size: 2.3em;
+    margin-top: 4rem;
+  }
+}

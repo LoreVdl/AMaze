@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.l-wrap {
+  display: grid;
+  grid-template-columns: repeat(32, 2.12688548126%);
+  grid-column-gap: 1.0416666666666665%;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.one-col-grid,
+.two-col-grid,
+.three-col-grid,
+.four-col-grid,
+.five-col-grid,
+.twelve-col-grid {
+  margin: 0 0.5208333333333333%;
+}
+
+.one-col-grid {
+  grid-column: 1 / span 1;
+}
+
+.two-col-grid {
+  grid-column: 1 / span 2;
+}
+
+.three-col-grid {
+  grid-column: 1 / span 3;
+}
+
+.four-col-grid {
+  grid-column: 1 / span 4;
+}
+
+.five-col-grid {
+  grid-column: 1 / span 5;
+}
+
+.seven-col-grid {
+  grid-column: 1 / span 7;
+}
+
+.twelve-col-grid {
+  grid-column: 1 / span 12;
+}
