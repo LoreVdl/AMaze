@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoudenDiefOneComponent implements OnInit {
 
+  readonly loginCode = '1234';
+
+  inputCode = '1234';
+
   constructor() { }
 
   ngOnInit() {
