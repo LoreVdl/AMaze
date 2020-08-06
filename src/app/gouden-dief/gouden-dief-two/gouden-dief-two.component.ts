@@ -4,12 +4,11 @@ import {GoudenDiefService} from '../gouden-dief.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-gouden-dief-one',
-  templateUrl: './gouden-dief-one.component.html',
-  styleUrls: ['./gouden-dief-one.component.scss']
+  selector: 'app-gouden-dief-two',
+  templateUrl: './gouden-dief-two.component.html',
+  styleUrls: ['./gouden-dief-two.component.scss']
 })
-export class GoudenDiefOneComponent implements OnInit {
-
+export class GoudenDiefTwoComponent implements OnInit {
   loginForm: FormGroup;
   code: FormControl = new FormControl('');
   showErrorScreen = false;
@@ -32,5 +31,4 @@ export class GoudenDiefOneComponent implements OnInit {
       this.showErrorScreen = true;
     }
   }
-
 }

@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
+import {CookieService} from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoudenDiefService {
 
-  constructor() { }
+  constructor(private cookieService: CookieService) { }
 
   readonly code = '1234';
-  input: string;
+  $inputCode: string;
 
   set inputCode(input: string) {
-   this.input = input;
+    this.cookieService.set('code', this.code, 1);
+    this.$inputCode = input;
   }
 
   get inputCode(): string {
-    return this.input;
+    console.log(this.cookieService.get('code'));
+    if (this.cookieService.get('code')) {
+      return this.cookieService.get('code');
+    } else {
+      return this.$inputCode;
+    }
   }
 }

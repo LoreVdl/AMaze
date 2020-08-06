@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LegendeZandhovenComponent} from './legende-zandhoven/legende-zandhoven.component';
 import {HomeComponent} from './home/home.component';
+import {CookieService} from 'ngx-cookie-service';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [
+    CookieService
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
