@@ -1,0 +1,13 @@
+@import "sizes";
+
+@mixin extra-grand {
+  @include fluid-font(30px, 94px);
+}
+
+@mixin large {
+  @include fluid-font(20px, 50px);
+}
+
+@mixin medium {
+  @include fluid-font(10px, 40px);
+}

@@ -1,10 +1,5 @@
 @import "src/assets/css/fonts";
-
-html {
-  background-color: #cecece;
-  font-size: 24px;
-  line-height: 36px;
-}
+@import "src/assets/css/font-size";
 
 .body {
   background-image: url("src/assets/images/bg-min.jpg");
@@ -29,37 +24,37 @@ html {
   }
 
   &__two {
-    top: -30px;
+    top: 0;
     position: absolute;
-    right: 30px;
+    right: -0.1%;
   }
 
   &__three {
     top: 45%;
-    left: -13%;
+    left: -0.1%;
     position: absolute;
   }
 }
 
 .title {
+  @include extra-grand;
   color: #000;
   font-family: arthur;
-  font-size: 4.2em;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 9rem;
 }
 
 .extra-title {
+  @include medium;
   color: #000;
   cursor: pointer;
   font-family: wisdom;
-  font-size: 2em;
-  text-align: end;
+  text-align: center;
 }
 
 .logo {
   margin-left: 10px;
-  width: 5%;
+  width: 4%;
 }
 
 .button {
@@ -67,23 +62,22 @@ html {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  margin-top: 15vh;
   margin-left: -30px;
+  margin-top: 10vh;
+
+  img {
+    width: 18%;
+  }
 }
 
 .subtitle {
+  @include large;
   align-items: center;
   color: #000;
   display: flex;
   font-family: vinchand;
-  font-size: 3.5em;
   justify-content: center;
-}
-
-@media only screen and (max-width: 959px) {
-  .title {
-    font-size: 3.2em;
-  }
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -92,13 +86,8 @@ html {
   }
 
   .title {
-    font-size: 3.3em;
     margin-top: 7rem;
     margin-bottom: 10px;
-  }
-
-  .extra-title {
-    font-size: 1em;
   }
 
   .logo {
@@ -117,7 +106,6 @@ html {
 
 @media only screen and (max-width: 479px) {
   .title {
-    font-size: 2.3em;
     margin-top: 4rem;
   }
 }

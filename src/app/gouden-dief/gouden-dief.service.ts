@@ -12,7 +12,7 @@ export class GoudenDiefService {
   $inputCode: string;
 
   set inputCode(input: string) {
-    this.cookieService.set('code', this.code, 1);
+    this.cookieService.set('code', this.code, 7);
     this.$inputCode = input;
   }
 
