@@ -1,17 +1,4 @@
-@font-face {
-  font-family: arthur;
-  src: url("../../assets/fonts/KingArthurLegend.ttf");
-}
-
-@font-face {
-  font-family: vinchand;
-  src: url("../../assets/fonts/vinchand.ttf");
-}
-
-@font-face {
-  font-family: wisdom;
-  src: url("../../assets/fonts/wisdom.ttf");
-}
+@import "src/assets/css/fonts";
 
 html {
   background-color: #cecece;

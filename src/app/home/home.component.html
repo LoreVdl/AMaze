@@ -1,8 +1,8 @@
-<div class="body" id="home">
+<div class="body" id="home" #home>
   <app-navigatie (scrollEvent)="scroll($event)"></app-navigatie>
 </div>
 
-<div class="body l-wrap" id="about">
+<div class="body l-wrap" id="profile" #profile>
   <div class="framework">
     <div class="frame">
 
@@ -17,29 +17,31 @@
       </p>
     </div>
   </div>
-  <app-small-navigatie class="two-col-grid small-nav" (scrollEvent)="scroll($event)"></app-small-navigatie>
+  <app-small-navigatie class="two-col-grid small-nav"
+                       (scrollEvent)="scroll($event)"
+                       [activeElement]="elementId"></app-small-navigatie>
 </div>
 
-<div class="body l-wrap" id="projects">
+<div class="body l-wrap" id="projects" #project>
   <div class="projects-list">
-    <div class="projects-list__project" *ngFor="let project of projects">
+    <div class="projects-list__project clickable" *ngFor="let project of projects">
       <img src="{{project.imageUrl}}" />
     </div>
   </div>
 </div>
 
 
-<div class="body l-wrap" id="shop">
+<div class="body l-wrap" id="shop" #shop>
 </div>
 
-<div class="body l-wrap" id="contact">
-  <div class="contact" [formGroup]="formData">
+<div class="body l-wrap" id="contact" #contact [ngSwitch]="contactService.viewState">
+  <form class="contact" [formGroup]="formData" (ngSubmit)="onSubmit($event)" *ngSwitchCase="ViewState.Default">
     <div class="form">
       <div class="form__name">
-        <input type="text" placeholder="Naam" formControlName="fullname">
+        <input type="text" placeholder="Naam" formControlName="fullname" name="fullname">
       </div>
       <div class="form__mail">
-        <input type="text" placeholder="Email" formControlName="email">
+        <input type="text" placeholder="Email" formControlName="email" name="email">
       </div>
     </div>
     <div class="gegevens">
@@ -56,12 +58,24 @@
       </div>
       <div class="gegevens__input">
         <div class="textarea">
-          <textarea placeholder="Jouw geweldig voorstel..." formControlName="comment"></textarea>
+          <textarea placeholder="Jouw geweldig voorstel..." formControlName="comment" name="comment"></textarea>
         </div>
         <div class="gegevens__button">
-          <button class="button" [disabled]="!formData.valid">Verzenden</button>
+          <button class="button" [ngClass]="{'clickable' : formData.valid}" [disabled]="!formData.valid">Verzenden</button>
         </div>
       </div>
     </div>
+  </form>
+
+  <div class="contact__error-state" *ngSwitchCase="ViewState.Error">
+    <p>Sorry, er ging iets mis met het versturen van het formulier. Probeer later nog een keer.</p>
+  </div>
+
+  <div class="contact__error-state" *ngSwitchCase="ViewState.Success">
+    <p>Bedankt voor je feedback. Je hoort nog snel van ons!</p>
+  </div>
+
+  <div class="contact__error-state" *ngSwitchCase="ViewState.Loading">
+
   </div>
 </div>

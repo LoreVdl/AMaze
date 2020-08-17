@@ -1,7 +1,15 @@
 <div class="nav">
-  <img (click)="scrollEvent.emit('about')" class="nav__button" src="../../../assets/images/profile.svg">
-  <img (click)="scrollEvent.emit('projects')" class="nav__button" src="../../../assets/images/projects.svg">
-  <img (click)="scrollEvent.emit('shop')" class="nav__button" src="../../../assets/images/shop.svg">
-  <img (click)="scrollEvent.emit('contact')" class="nav__button" src="../../../assets/images/contact.svg">
+  <img (click)="scrollEvent.emit('profile')"
+       class="nav__button"
+       [src]="getIconUrl('profile')">
+  <img (click)="scrollEvent.emit('projects')"
+       class="nav__button"
+       [src]="getIconUrl('projects')">
+  <img (click)="scrollEvent.emit('shop')"
+       class="nav__button"
+       [src]="getIconUrl('shop')">
+  <img (click)="scrollEvent.emit('contact')"
+       class="nav__button"
+       [src]="getIconUrl('contact')">
 </div>
 

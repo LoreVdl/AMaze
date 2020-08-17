@@ -7,6 +7,7 @@ import { LegendeZandhovenComponent } from './legende-zandhoven/legende-zandhoven
 import { HomeComponent } from './home/home.component';
 import {SharedModule} from './shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ContactService} from './home/contact.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     SharedModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ContactService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
