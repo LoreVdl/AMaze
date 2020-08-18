@@ -15,23 +15,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
   projects = [
     {
       name: 'Next Escape',
-      imageUrl: '../../assets/images/nextEscapeButton.svg'
+      imageUrl: '../../assets/images/nextEscapeButton.svg',
+      styling: ''
     },
     {
       name: 'De legende van Zandhoven',
-      imageUrl: '../../assets/images/dlvzButton.svg'
+      imageUrl: '../../assets/images/dlvzButton.svg',
+      styling: ''
     },
     {
       name: 'Farm fun',
-      imageUrl: '../../assets/images/farmfunButton.svg'
+      imageUrl: '../../assets/images/farmfunButton.svg',
+      styling: ''
     },
     {
       name: 'De gouden dief',
-      imageUrl: '../../assets/images/goudenDiefButton.svg'
+      imageUrl: '../../assets/images/goudenDiefButton.svg',
+      styling: ''
     },
     {
       name: 'More to come',
-      imageUrl: '../../assets/images/moreToComeButton.svg'
+      imageUrl: '../../assets/images/moreToComeButton.svg',
+      styling: ''
     }
     ];
 
@@ -44,6 +49,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   shopOffset: number = null;
   contactOffset: number = null;
   isScrolling = false;
+  index = 1;
 
   @ViewChild('home', { static: true }) homeElement: ElementRef;
   @ViewChild('profile', { static: true }) profileElement: ElementRef;
@@ -62,6 +68,24 @@ export class HomeComponent implements OnInit, AfterViewInit {
       email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       comment: new FormControl('', [Validators.required])
     });
+
+    for (const project of this.projects) {
+      let variabele
+      if (this.index >= 4) {
+        this.index = 1;
+      }
+
+      if (this.index === 1) {
+        variabele = (this.index * 5);
+      } else if (this.index === 2) {
+        variabele = (this.index * 6);
+      } else {
+        variabele = ((this.index * 6) + 1);
+      }
+      const variabeleString = variabele.toString();
+      project.styling = variabeleString + '/ span 6';
+      this.index++;
+    }
   }
 
   ngAfterViewInit() {

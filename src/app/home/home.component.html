@@ -14,9 +14,12 @@
   </app-small-navigatie>
 </div>
 
-<div class="body l-wrap" id="projects" #project>
-  <div class="projects-list">
-    <div class="projects-list__project clickable" *ngFor="let project of projects">
+<div class="body" id="projects" #project>
+  <div class="l-wrap">
+    <div class="projects-list clickable"
+         *ngFor="let project of projects;
+       let last = last"
+         [ngStyle]="{'grid-column': project.styling}">
       <img src="{{project.imageUrl}}" />
     </div>
   </div>
