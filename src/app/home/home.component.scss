@@ -5,6 +5,7 @@
 }
 
 .body {
+  align-items: center;
   background-color: #000;
   height: 100vh;
   width: 100vw;
@@ -30,8 +31,6 @@
 }
 
 .about-list {
-  position: absolute;
-  left: 2.12688548126%;
 
   // img {
   //   clip-path: polygon(0% 0%, 0% 110%, 100% 100%, 100% 50%, 80% 40%, 80% 30%, 120% 24%, 100% 0%);
@@ -42,22 +41,17 @@
 }
 
 .framework {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  border: 1px solid #fff;
   grid-column: 4 / span 22;
   justify-content: center;
-  position: relative;
 
-  .frame {
-    border: 1px solid #fff;
-    height: 60%;
-
-    &__text {
-      color: #fff;
-      font-family: 'avenir';
-      font-size: 2em;
-    }
+  &__text {
+    color: #fff;
+    font-family: 'avenir';
+    font-size: 2em;
+    margin-bottom: 0;
+    padding: 4% 3% 8% 4%;
   }
 }
 
