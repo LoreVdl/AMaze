@@ -16,27 +16,31 @@ export class HomeComponent implements OnInit, AfterViewInit {
     {
       name: 'Next Escape',
       imageUrl: '../../assets/images/nextEscapeButton.svg',
-      styling: ''
+      styling: '',
+      url: '/home'
     },
     {
       name: 'De legende van Zandhoven',
       imageUrl: '../../assets/images/dlvzButton.svg',
-      styling: ''
+      styling: '',
+      url: '/delegendevanzandhoven'
     },
     {
       name: 'Farm fun',
       imageUrl: '../../assets/images/farmfunButton.svg',
-      styling: ''
+      styling: '',
+      url: '/home'
     },
     {
       name: 'De gouden dief',
       imageUrl: '../../assets/images/goudenDiefButton.svg',
-      styling: ''
+      styling: '',
+      url: '/home'
     },
     {
       name: 'More to come',
       imageUrl: '../../assets/images/moreToComeButton.svg',
-      styling: ''
+      styling: '',
     }
     ];
 
@@ -76,14 +80,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
 
       if (this.index === 1) {
-        variabele = (this.index * 5);
+        variabele = (this.index * 4);
       } else if (this.index === 2) {
-        variabele = (this.index * 6);
+        variabele = (this.index * 5);
       } else {
-        variabele = ((this.index * 6) + 1);
+        variabele = ((this.index * 5) + 1);
       }
       const variabeleString = variabele.toString();
-      project.styling = variabeleString + '/ span 6';
+      project.styling = variabeleString + '/ span 5';
       this.index++;
     }
   }

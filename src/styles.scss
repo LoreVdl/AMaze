@@ -3,6 +3,10 @@
   src: url("./assets/fonts/Avenir.ttc");
 }
 
+* {
+  outline: none;
+}
+
 .form-container {
   align-items: center;
   display: flex;

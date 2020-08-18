@@ -16,11 +16,12 @@
 
 <div class="body" id="projects" #project>
   <div class="l-wrap">
-    <div class="projects-list clickable"
-         *ngFor="let project of projects;
-       let last = last"
-         [ngStyle]="{'grid-column': project.styling}">
-      <img src="{{project.imageUrl}}" />
+    <div class="projects-list"
+         *ngFor="let project of projects; let last = last"
+         [ngStyle]="{'grid-column': project.styling}"
+         [ngClass]="{'clickable': !last}">
+      <img src="{{project.imageUrl}}"
+           [routerLink]="project.url"/>
     </div>
   </div>
 </div>
