@@ -9,17 +9,16 @@
     </div>
 
     <div class="about-list">
-      <img src="../../assets/images/projects-list.svg">
-      <p class="frame__text">Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voorgaan. We werken mee aan puzzels voor escape rooms,
-        we bouwen gepersonaliseerde spelen voor particulieren en bedrijven en brengen ook zelf puzzels uit voor een avond vol spelplezier.
-        Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voorgaan. We werken mee aan puzzels voor escape rooms,
-        we bouwen gepersonaliseerde spelen voor particulieren en bedrijven en brengen ook zelf puzzels uit voor een avond vol spelplezier.
+
+      <p class="frame__text">Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voor gaan.
+        We werken mee aan puzzels voor escape rooms, we bouwen gepersonaliseerde spelen en activiteiten voor
+        particulieren en bedrijven. We brengen ook onze eigen spelen op de markt die zorgen voor een gezellig samenzijn
+        met de nodige portie puzzelplezier.
       </p>
     </div>
   </div>
-  <app-small-navigatie class="two-col-grid small-nav"
-                       (scrollEvent)="scroll($event)"
-                       [activeElement]="elementId"></app-small-navigatie>
+  <app-small-navigatie class="two-col-grid small-nav" (scrollEvent)="scroll($event)" [activeElement]="elementId">
+  </app-small-navigatie>
 </div>
 
 <div class="body l-wrap" id="projects" #project>
@@ -46,7 +45,7 @@
     </div>
     <div class="gegevens">
       <div class="gegevens__number">
-        <p class="gegevens__email">Welcome@a-maze.be</p>
+        <p class="gegevens__email">welcome@a-maze.be</p>
         <div class="gegevens__detail">
           <p>Ruben Van der Meirsch</p>
           <p>+32 499 76 43 45</p>
@@ -61,18 +60,21 @@
           <textarea placeholder="Jouw geweldig voorstel..." formControlName="comment" name="comment"></textarea>
         </div>
         <div class="gegevens__button">
-          <button class="button" [ngClass]="{'clickable' : formData.valid}" [disabled]="!formData.valid">Verzenden</button>
+          <button class="button" [ngClass]="{'clickable' : formData.valid}"
+            [disabled]="!formData.valid">Verzenden</button>
         </div>
       </div>
     </div>
   </form>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Error">
-    <p>Sorry, er ging iets mis met het versturen van het formulier. Probeer later nog een keer.</p>
+    <p>Oeps! Er ging iets mis bij het versturen van jouw gegegevens. Probeer het nog eens of neem contact met ons op via
+      welcome@a-maze.be.</p>
   </div>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Success">
-    <p>Bedankt voor je feedback. Je hoort nog snel van ons!</p>
+    <p>Geweldig om te horen dat jij interesse hebt om samen te werken met A Maze! We bekijken je voorstel aandachtig en
+      nemen zo snel mogelijk contact met jou op.</p>
   </div>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Loading">
