@@ -41,7 +41,7 @@
   color: #000;
   font-family: arthur;
   text-align: center;
-  margin-top: 9rem;
+  margin-top: 10vh;
 }
 
 .extra-title {
@@ -80,13 +80,14 @@
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 767px) {
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
   .splash img {
     display: none;
   }
 
   .title {
-    margin-top: 7rem;
+    margin-top: 50px;
     margin-bottom: 10px;
   }
 
@@ -98,14 +99,52 @@
   .button img {
     width: 180px;
   }
+}
 
-  .subtitle {
-    font-size: 1.9em;
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-width: 800px) and (orientation: landscape){
+  .title {
+    margin-top: 20px;
   }
 }
 
-@media only screen and (max-width: 479px) {
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 900px) and (orientation : portrait) {
   .title {
-    margin-top: 4rem;
+    margin-bottom: 10px;
+    font-size: 40px;
+    margin-top: 15vh;
+  }
+
+  .subtitle {
+    font-size: 35px;
+  }
+
+  .extra-title {
+    font-size: 20px;
+  }
+
+  .button img {
+    width: 220px;
+  }
+}
+
+@media only screen and (min-device-width : 900px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .title {
+    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 15vh;
+  }
+
+  .subtitle {
+    font-size: 45px;
+  }
+
+  .extra-title {
+    font-size: 25px;
+  }
+
+  .button img {
+    width: 280px;
   }
 }
