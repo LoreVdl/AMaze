@@ -1,0 +1,72 @@
+@import "src/assets/css/fonts";
+@import "src/assets/css/font-size";
+
+.hamburger {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__icon {
+    margin-left: 20px;
+    width: 8%;
+  }
+
+  &__element {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+    img {
+      width: 60px;
+    }
+
+    p {
+      @include large;
+      font-family: 'avenir';
+      margin-bottom: 0;
+    }
+  }
+}
+
+.full-hamburger {
+  background-color: #fff;
+  position: fixed;
+  height: 50vh;
+  top: 10vh;
+  width: 60vw;
+}
+
+.button-nav {
+  margin-bottom: 10px;
+  width: 100%;
+
+  &__button {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    justify-content: space-between;
+    margin-bottom: 7px;
+
+    img {
+      margin-left: 10px;
+      width: 15%;
+    }
+
+    p {
+      @include large;
+      font-family: 'avenir';
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+}
+

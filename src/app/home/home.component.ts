@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   readonly ViewState = ViewState;
 
+  width: number;
   projects = [
     {
       name: 'Next Escape',
@@ -68,6 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.width = window.innerWidth;
     this.formData = this.formbuilder.group({
       fullname: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
@@ -75,21 +77,23 @@ export class HomeComponent implements OnInit, AfterViewInit {
     });
 
     for (const project of this.projects) {
-      let variabele
-      if (this.index >= 4) {
-        this.index = 1;
-      }
+      if (this.width >= 901) {
+        let variabele;
+        if (this.index >= 4) {
+          this.index = 1;
+        }
 
-      if (this.index === 1) {
-        variabele = (this.index * 4);
-      } else if (this.index === 2) {
-        variabele = (this.index * 5);
-      } else {
-        variabele = ((this.index * 5) + 1);
+        if (this.index === 1) {
+          variabele = (this.index * 4);
+        } else if (this.index === 2) {
+          variabele = (this.index * 5);
+        } else {
+          variabele = ((this.index * 5) + 1);
+        }
+        const variabeleString = variabele.toString();
+        project.styling = variabeleString + '/ span 5';
+        this.index++;
       }
-      const variabeleString = variabele.toString();
-      project.styling = variabeleString + '/ span 5';
-      this.index++;
     }
   }
 
@@ -137,10 +141,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   getIconUrl(id: string): string {
-    if (this.elementId === id) {
-      return '../../../assets/images/' + id + '.svg';
-    } else {
-      return '../../../assets/images/' + id + '.svg';
-    }
+    return '../../../assets/images/' + id + '.svg';
+  }
+
+  canShowHamburger(): boolean {
+    return this.elementId === 'projects' || this.elementId === 'shop' || this.elementId === 'profile' || this.elementId === 'contact';
   }
 }

@@ -34,6 +34,11 @@
   grid-column: 27 / span 2;
 }
 
+.hamburger-menu {
+  display: none;
+  grid-column: 1 / span 32;
+}
+
 .button-nav {
   display: none;
   grid-column: 1 / span 32;
@@ -47,7 +52,7 @@
     flex-direction: row;
     height: 9vh;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 
     img {
       margin-left: 10px;
@@ -178,6 +183,18 @@ textarea {
     }
   }
 
+  &__socials {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
   &__detail {
     align-items: center;
     display: flex;
@@ -214,10 +231,113 @@ textarea {
     display: block;
   }
 
+  .hamburger-menu {
+    display: block;
+  }
+
   .logo {
     height: 20vh;
-    grid-column: 7 / span 20;
+    grid-column: 8 / span 18;
     margin-top: 20px;
+  }
+
+  .framework {
+    border: 1px solid #fff;
+    grid-column: 4 / span 26;
+    height: 78vh;
+    margin-top: 12vh;
+
+    &__text {
+     font-size: 22px;
+      color: #fff;
+      font-family: 'avenir';
+      margin-bottom: 0;
+      padding: 4% 3% 8% 4%;
+    }
+  }
+
+  .projects-list {
+    align-items: center;
+    grid-column: 8 / span 18;
+    margin-bottom: 7%;
+    margin-top: 7%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .projects-list:first-child {
+    margin-top: 12vh;
+  }
+
+  .contact {
+    grid-column: 5 / span 24;
+
+    &__error-state {
+      @include extra-medium;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      grid-column: 9 / span 16;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    &__mail {
+      margin-top: 1.0416666667%;
+    }
+  }
+
+  .gegevens {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &__email {
+      margin-top: 20px;
+    }
+
+    &__button {
+      height: 40px;
+    }
+
+    &__number {
+      font-family: 'avenir';
+      font-size: 17px;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .textarea {
+      height:  200px;
+    }
+
+    &__socials {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 30%;
+      }
+
+      a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+
   }
 }
 
@@ -225,6 +345,10 @@ textarea {
 @media only screen and (min-device-width : 768px) and (max-device-width : 900px) and (orientation : portrait) {
   .small-nav {
     display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
   }
 
   .button-nav {

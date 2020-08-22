@@ -1,0 +1,43 @@
+<div class="hamburger">
+  <ng-container *ngTemplateOutlet="hamburgerMenuOpen ? openMenu : closedMenu"></ng-container>
+  <div class="hamburger__element">
+    <img [src]="source">
+    <p>{{getElementName(elementId)}}</p>
+  </div>
+</div>
+
+<div class="full-hamburger" *ngIf="hamburgerMenuOpen">
+  <div class="button-nav">
+    <div class="button-nav__button" (click)="scrollEvent('profile')">
+      <img class="nav__button"
+           [src]="getIconUrl('profile')">
+      <p>OVER ONS</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scrollEvent('projects')">
+      <img class="nav__button"
+           [src]="getIconUrl('projects')">
+      <p>PROJECTEN</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scrollEvent('shop')">
+      <img class="nav__button"
+           [src]="getIconUrl('shop')">
+      <p>WEBSHOP</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scrollEvent('contact')">
+      <img class="nav__button"
+           [src]="getIconUrl('contact')">
+      <p>CONTACT</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #openMenu>
+  <img class="hamburger__icon" src="../../../assets/images/cross.svg" (click)="toggleMenu()">
+</ng-template>
+
+<ng-template #closedMenu>
+  <img class="hamburger__icon" src="../../../assets/images/hamburger.svg" (click)="toggleMenu()">
+</ng-template>

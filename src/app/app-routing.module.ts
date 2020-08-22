@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'degoudendief',
     loadChildren: () => import('./gouden-dief/gouden-dief.module').then(m => m.GoudenDiefModule)
   },
+  {
+    path: 'projects',
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
+  },
   { path: 'delegendevanzandhoven', component: LegendeZandhovenComponent },
   { path: 'home', component: HomeComponent },
   { path: '',  redirectTo: '/home', pathMatch: 'full' }

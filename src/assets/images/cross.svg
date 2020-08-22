@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.35538" height="41.35532" viewBox="0 0 41.35538 41.35532">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="20.67766" x2="41.35538" y2="20.67766" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006a31"/>
+      <stop offset="0.2591" stop-color="#007935"/>
+      <stop offset="0.7006" stop-color="#008d39"/>
+      <stop offset="1" stop-color="#00943a"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="WEBSHOP">
+      <path class="cls-1" d="M24.92036,20.67763,40.4767,5.12129A3,3,0,1,0,36.234.87868L20.67769,16.435,5.12135.87868A3,3,0,0,0,.87868,5.12129L16.43507,20.67763.87868,36.234a3,3,0,0,0,4.24267,4.24262L20.67769,24.9203,36.234,40.47664A3,3,0,1,0,40.4767,36.234Z"/>
+    </g>
+  </g>
+</svg>

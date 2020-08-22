@@ -40,6 +40,11 @@
   </div>
   <app-small-navigatie class="two-col-grid small-nav" (scrollEvent)="scroll($event)" [activeElement]="elementId">
   </app-small-navigatie>
+  <app-hamburger-menu *ngIf="canShowHamburger()"
+                      [source]="getIconUrl(elementId)"
+                      [elementId]="elementId"
+                      class="hamburger-menu"
+                      (scroll)="scroll($event)"></app-hamburger-menu>
 </div>
 
 <div class="body" id="projects" #project>
@@ -61,6 +66,24 @@
 <div class="body l-wrap" id="contact" #contact [ngSwitch]="contactService.viewState">
   <form class="contact" [formGroup]="formData" (ngSubmit)="onSubmit($event)" *ngSwitchCase="ViewState.Default">
     <div class="form">
+      <div class="gegevens" *ngIf="width <= 901">
+        <div class="gegevens__number">
+          <p class="gegevens__email">welcome@a-maze.be</p>
+          <div class="gegevens__detail">
+            <p>Ruben Van der Meirsch</p>
+            <p>+32 499 76 43 45</p>
+          </div>
+          <div class="gegevens__detail">
+            <p>Lore Vanderlinden</p>
+            <p>+32 499 33 44 78</p>
+          </div>
+          <div class="gegevens__socials">
+            <a href="https://www.facebook.com/a.maze.experiences" target="_blank"><img class="clickable" src="../../assets/images/facebook.svg"></a>
+            <a href="https://www.instagram.com/a.maze.experiences/" target="_blank"><img class="clickable" src="../../assets/images/instagram.svg"></a>
+            <a href="https://www.linkedin.com/company/a-maze-experiences/" target="_blank"><img class="clickable" src="../../assets/images/linkedin.svg"></a>
+          </div>
+        </div>
+      </div>
       <div class="form__name">
         <input type="text" placeholder="Naam" formControlName="fullname" name="fullname">
       </div>
@@ -69,7 +92,7 @@
       </div>
     </div>
     <div class="gegevens">
-      <div class="gegevens__number">
+      <div class="gegevens__number" *ngIf="width >= 901">
         <p class="gegevens__email">welcome@a-maze.be</p>
         <div class="gegevens__detail">
           <p>Ruben Van der Meirsch</p>
@@ -78,6 +101,11 @@
         <div class="gegevens__detail">
           <p>Lore Vanderlinden</p>
           <p>+32 499 33 44 78</p>
+        </div>
+        <div class="gegevens__socials">
+          <a href="https://www.facebook.com/a.maze.experiences" target="_blank"><img class="clickable" src="../../assets/images/facebook.svg"></a>
+          <a href="https://www.instagram.com/a.maze.experiences/" target="_blank"><img class="clickable" src="../../assets/images/instagram.svg"></a>
+          <a href="https://www.linkedin.com/company/a-maze-experiences/" target="_blank"><img class="clickable" src="../../assets/images/linkedin.svg"></a>
         </div>
       </div>
       <div class="gegevens__input">
