@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} f
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from './contact.service';
 import {ViewState} from './viewState.enum';
+import smoothscroll from 'smoothscroll-polyfill';
 
 @Component({
   selector: 'app-home',
@@ -123,6 +124,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.isScrolling = true;
     this.elementId = id;
     const element = document.getElementById(id) as HTMLElement;
+    smoothscroll.polyfill();
     element.scrollIntoView({behavior: 'smooth'});
 
     setTimeout(() => {
