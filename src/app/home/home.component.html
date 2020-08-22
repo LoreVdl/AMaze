@@ -1,5 +1,33 @@
-<div class="body" id="home" #home>
-  <app-navigatie (scrollEvent)="scroll($event)"></app-navigatie>
+<div class="body l-wrap" id="home" #home>
+  <div class="twelve-col-grid logo">
+    <img src="../../../assets/images/logo.svg">
+  </div>
+
+  <div class="button-nav">
+    <div class="button-nav__button" (click)="scroll('profile')">
+      <img class="nav__button"
+           [src]="getIconUrl('profile')">
+      <p>OVER ONS</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scroll('projects')">
+      <img class="nav__button"
+           [src]="getIconUrl('projects')">
+      <p>PROJECTEN</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scroll('shop')">
+      <img class="nav__button"
+           [src]="getIconUrl('shop')">
+      <p>WEBSHOP</p>
+    </div>
+
+    <div class="button-nav__button" (click)="scroll('contact')">
+      <img class="nav__button"
+           [src]="getIconUrl('contact')">
+      <p>CONTACT</p>
+    </div>
+  </div>
 </div>
 
 <div class="body l-wrap" id="profile" #profile>

@@ -10,10 +10,9 @@ html {
 
 .l-wrap {
   display: grid;
-  grid-template-columns: repeat(32, 2.12688548126%);
+  grid-template-columns: repeat(32, 2.11688548126%);
   grid-column-gap: 1.0416666666666665%;
   width: 100%;
-  padding: 0 10px;
 }
 
 .one-col-grid,

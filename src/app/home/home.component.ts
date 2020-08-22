@@ -133,4 +133,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   onSubmit(formData): void {
     this.contactService.postMessage(formData);
   }
+
+  getIconUrl(id: string): string {
+    if (this.elementId === id) {
+      return '../../../assets/images/' + id + '.svg';
+    } else {
+      return '../../../assets/images/' + id + '.svg';
+    }
+  }
 }
