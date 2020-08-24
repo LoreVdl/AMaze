@@ -1,30 +1,26 @@
 <div class="body l-wrap" id="home" #home>
   <div class="twelve-col-grid logo">
-    <img src="../../../assets/images/logo.svg">
+    <img src="../../../assets/images/logo.svg" />
   </div>
 
   <div class="button-nav">
     <div class="button-nav__button" (click)="scroll('profile')">
-      <img class="nav__button"
-           [src]="getIconUrl('profile')">
+      <img class="nav__button" [src]="getIconUrl('profile')" />
       <p>OVER ONS</p>
     </div>
 
     <div class="button-nav__button" (click)="scroll('projects')">
-      <img class="nav__button"
-           [src]="getIconUrl('projects')">
+      <img class="nav__button" [src]="getIconUrl('projects')" />
       <p>PROJECTEN</p>
     </div>
 
     <div class="button-nav__button" (click)="scroll('shop')">
-      <img class="nav__button"
-           [src]="getIconUrl('shop')">
+      <img class="nav__button" [src]="getIconUrl('shop')" />
       <p>WEBSHOP</p>
     </div>
 
     <div class="button-nav__button" (click)="scroll('contact')">
-      <img class="nav__button"
-           [src]="getIconUrl('contact')">
+      <img class="nav__button" [src]="getIconUrl('contact')" />
       <p>CONTACT</p>
     </div>
   </div>
@@ -32,39 +28,61 @@
 
 <div class="body l-wrap" id="profile" #profile>
   <div class="framework">
-    <p class="framework__text">Het bouwen en bedenken van verassende ervaringen op maat is waar we met A Maze voor gaan.
-      We werken mee aan puzzels voor escape rooms, we bouwen gepersonaliseerde spelen en activiteiten voor
-      particulieren en bedrijven. We brengen ook onze eigen spelen op de markt die zorgen voor een gezellig samenzijn
-      met de nodige portie puzzelplezier.
+    <p class="framework__text">
+      <strong>A Maze, mysterieus entertainment op maat</strong><br><br>
+      Het bouwen en bedenken van verrassende ervaringen op maat is waar A
+      Maze voor staat. We maken puzzels voor escape rooms en doorlopen
+      samen het hele proces: het thema van de kamer, daarbij passende puzzels
+      bedenken en ook ontwerpen, de juiste materialen vinden, bouwen en testen.<br> <br> Daarnaast creëren we
+      gepersonaliseerde spelen en activiteiten voor particulieren en bedrijven:
+      een speciale aankondiging brengen op een creative manier, nieuw leven
+      blazen in een vergeten project of iets te vieren met vrienden en familie, we bespreken samen wat uw wensen zijn. <br> <br> Tenslotte brengen we ook onze eigen kant en klare spelen op de markt die
+      zorgen voor een gezellig samenzijn met de nodige dosis puzzelplezier voor
+      jong en oud. <br> <br> Bekijk snel ons aanbod.
     </p>
   </div>
-  <app-small-navigatie class="two-col-grid small-nav" (scrollEvent)="scroll($event)" [activeElement]="elementId">
+  <app-small-navigatie
+    class="two-col-grid small-nav"
+    (scrollEvent)="scroll($event)"
+    [activeElement]="elementId"
+  >
   </app-small-navigatie>
-  <app-hamburger-menu *ngIf="canShowHamburger()"
-                      [source]="getIconUrl(elementId)"
-                      [elementId]="elementId"
-                      class="hamburger-menu"
-                      (scroll)="scroll($event)"></app-hamburger-menu>
+  <app-hamburger-menu
+    *ngIf="canShowHamburger()"
+    [source]="getIconUrl(elementId)"
+    [elementId]="elementId"
+    class="hamburger-menu"
+    (scroll)="scroll($event)"
+  ></app-hamburger-menu>
 </div>
 
 <div class="body" id="projects" #project>
   <div class="l-wrap">
-    <div class="projects-list"
-         *ngFor="let project of projects; let last = last"
-         [ngStyle]="{'grid-column': project.styling}"
-         [ngClass]="{'clickable': !last}">
-      <img src="{{project.imageUrl}}"
-           [routerLink]="project.url"/>
+    <div
+      class="projects-list"
+      *ngFor="let project of projects; let last = last"
+      [ngStyle]="{ 'grid-column': project.styling }"
+      [ngClass]="{ clickable: !last }"
+    >
+      <img src="{{ project.imageUrl }}" [routerLink]="project.url" />
     </div>
   </div>
 </div>
 
+<div class="body l-wrap" id="shop" #shop></div>
 
-<div class="body l-wrap" id="shop" #shop>
-</div>
-
-<div class="body l-wrap" id="contact" #contact [ngSwitch]="contactService.viewState">
-  <form class="contact" [formGroup]="formData" (ngSubmit)="onSubmit($event)" *ngSwitchCase="ViewState.Default">
+<div
+  class="body l-wrap"
+  id="contact"
+  #contact
+  [ngSwitch]="contactService.viewState"
+>
+  <form
+    class="contact"
+    [formGroup]="formData"
+    (ngSubmit)="onSubmit($event)"
+    *ngSwitchCase="ViewState.Default"
+  >
     <div class="form">
       <div class="gegevens" *ngIf="width <= 901">
         <div class="gegevens__number">
@@ -78,17 +96,39 @@
             <p>+32 499 33 44 78</p>
           </div>
           <div class="gegevens__socials">
-            <a href="https://www.facebook.com/a.maze.experiences" target="_blank"><img class="clickable" src="../../assets/images/facebook.svg"></a>
-            <a href="https://www.instagram.com/a.maze.experiences/" target="_blank"><img class="clickable" src="../../assets/images/instagram.svg"></a>
-            <a href="https://www.linkedin.com/company/a-maze-experiences/" target="_blank"><img class="clickable" src="../../assets/images/linkedin.svg"></a>
+            <a
+              href="https://www.facebook.com/a.maze.experiences"
+              target="_blank"
+              ><img class="clickable" src="../../assets/images/facebook.svg"
+            /></a>
+            <a
+              href="https://www.instagram.com/a.maze.experiences/"
+              target="_blank"
+              ><img class="clickable" src="../../assets/images/instagram.svg"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/a-maze-experiences/"
+              target="_blank"
+              ><img class="clickable" src="../../assets/images/linkedin.svg"
+            /></a>
           </div>
         </div>
       </div>
       <div class="form__name">
-        <input type="text" placeholder="Naam" formControlName="fullname" name="fullname">
+        <input
+          type="text"
+          placeholder="Naam"
+          formControlName="fullname"
+          name="fullname"
+        />
       </div>
       <div class="form__mail">
-        <input type="text" placeholder="Email" formControlName="email" name="email">
+        <input
+          type="text"
+          placeholder="Email"
+          formControlName="email"
+          name="email"
+        />
       </div>
     </div>
     <div class="gegevens">
@@ -103,34 +143,56 @@
           <p>+32 499 33 44 78</p>
         </div>
         <div class="gegevens__socials">
-          <a href="https://www.facebook.com/a.maze.experiences" target="_blank"><img class="clickable" src="../../assets/images/facebook.svg"></a>
-          <a href="https://www.instagram.com/a.maze.experiences/" target="_blank"><img class="clickable" src="../../assets/images/instagram.svg"></a>
-          <a href="https://www.linkedin.com/company/a-maze-experiences/" target="_blank"><img class="clickable" src="../../assets/images/linkedin.svg"></a>
+          <a href="https://www.facebook.com/a.maze.experiences" target="_blank"
+            ><img class="clickable" src="../../assets/images/facebook.svg"
+          /></a>
+          <a
+            href="https://www.instagram.com/a.maze.experiences/"
+            target="_blank"
+            ><img class="clickable" src="../../assets/images/instagram.svg"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/a-maze-experiences/"
+            target="_blank"
+            ><img class="clickable" src="../../assets/images/linkedin.svg"
+          /></a>
         </div>
       </div>
       <div class="gegevens__input">
         <div class="textarea">
-          <textarea placeholder="Jouw geweldig voorstel..." formControlName="comment" name="comment"></textarea>
+          <textarea
+            placeholder="Jouw geweldig voorstel..."
+            formControlName="comment"
+            name="comment"
+          ></textarea>
         </div>
         <div class="gegevens__button">
-          <button class="button" [ngClass]="{'clickable' : formData.valid}"
-            [disabled]="!formData.valid">Verzenden</button>
+          <button
+            class="button"
+            [ngClass]="{ clickable: formData.valid }"
+            [disabled]="!formData.valid"
+          >
+            Verzenden
+          </button>
         </div>
       </div>
     </div>
   </form>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Error">
-    <p>Oeps! Er ging iets mis bij het versturen van jouw gegegevens. Probeer het nog eens of neem contact met ons op via
-      welcome@a-maze.be.</p>
+    <p>
+      Oeps! Er ging iets mis bij het versturen van jouw gegegevens. Probeer het
+      nog eens of neem contact met ons op via welcome@a-maze.be.
+    </p>
   </div>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Success">
-    <p>Geweldig om te horen dat jij interesse hebt om samen te werken met A Maze! We bekijken je voorstel aandachtig en
-      nemen zo snel mogelijk contact met jou op.</p>
+    <p>
+      Geweldig om te horen dat jij interesse hebt om samen te werken met A Maze!
+      We bekijken je voorstel aandachtig en nemen zo snel mogelijk contact met
+      jou op.
+    </p>
   </div>
 
-  <div class="contact__error-state" *ngSwitchCase="ViewState.Loading">
-
-  </div>
+  <div class="contact__error-state" *ngSwitchCase="ViewState.Loading"></div>
 </div>
