@@ -1,0 +1,20 @@
+@import "src/assets/css/fonts";
+@import "src/assets/css/font-size";
+
+.body {
+    background-color: #000;
+    display: grid;
+    width: 100vw;
+    color: white;
+    font-family: "avenir";
+  }
+
+  .container{
+      grid-column: 3/ span 25;
+      &__title{
+        @include large;
+      }
+      &__img{
+          width: 50%;
+      }
+  }
