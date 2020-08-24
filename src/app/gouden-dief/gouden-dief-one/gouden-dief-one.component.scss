@@ -1,8 +1,12 @@
 .body {
-  background-image: url("src/assets/gouden-dief-icons/bg.svg");
+  background-image: url("src/assets/gouden-dief-icons/bg1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
+}
+
+.input__field {
+  border: none;
 }
