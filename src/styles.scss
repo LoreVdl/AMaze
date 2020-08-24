@@ -1,12 +1,21 @@
-@font-face {
-  font-family: avenir;
-  src: url("./assets/fonts/Avenir.ttc");
-}
+@import "./assets/css/fonts";
 
 @import "./assets/css/font-size";
 
 * {
   outline: none;
+}
+
+.text-container {
+  @include large;
+  align-items: center;
+  color: #fff;
+  font-family: 'trueblood';
+  display: flex;
+  grid-column: 5 / span 23;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .form-container {
@@ -33,22 +42,36 @@
 .input {
   align-items: center;
   display: flex;
-  grid-column: 12 / span 8;
+  grid-column: 12 / span 9;
   justify-content: center;
+  position: relative;
 
   &__field {
     @include extra-medium;
     border: 1px solid lightgray;
-    border-radius: 5px;
     height: 100%;
-    font-family: 'avenir';
+    font-family: 'mayan';
+    margin-left: 8%;
     outline: none;
     padding: 10px;
-    width: 100%;
+    width: 84%;
   }
 
   &__label {
-    height: 8%;
+    height: 6%;
+    position: absolute;
     width: 100%;
   }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  grid-column: 29 / span 2;
+  justify-content: flex-end;
+  width: 100%;
 }
