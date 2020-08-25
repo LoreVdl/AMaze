@@ -11,10 +11,12 @@
 
   .container{
       grid-column: 3/ span 25;
-      &__title{
+
+      &__title {
         @include large;
       }
-      &__img{
-          width: 50%;
-      }
+
+    img {
+      width: 50%;
+    }
   }

@@ -17,7 +17,6 @@ export class GoudenDiefService {
   }
 
   get inputCode(): string {
-    console.log(this.cookieService.get('code'));
     if (this.cookieService.get('code')) {
       return this.cookieService.get('code');
     } else {
