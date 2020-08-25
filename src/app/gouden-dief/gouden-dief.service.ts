@@ -8,17 +8,24 @@ export class GoudenDiefService {
 
   constructor(private cookieService: CookieService) { }
 
-  readonly code = '1234';
+  readonly codePageOne = 'Sch8tt2nJ8g2rs';
+
+  readonly codePageThree = [
+    'sir winston churchill',
+    'winston churchill',
+    'churchill'
+  ];
+
   $inputCode: string;
 
-  set inputCode(input: string) {
-    this.cookieService.set('code', this.code, 7);
+  setInputCode(code: string, input: string) {
+    this.cookieService.set(code, input, 7);
     this.$inputCode = input;
   }
 
-  get inputCode(): string {
-    if (this.cookieService.get('code')) {
-      return this.cookieService.get('code');
+  getInputCode(code: string): string {
+    if (this.cookieService.get(code)) {
+      return this.cookieService.get(code);
     } else {
       return this.$inputCode;
     }

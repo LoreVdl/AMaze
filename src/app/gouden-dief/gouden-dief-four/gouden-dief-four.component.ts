@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-gouden-dief-two',
-  templateUrl: './gouden-dief-two.component.html',
-  styleUrls: ['./gouden-dief-two.component.scss']
+  selector: 'app-gouden-dief-four',
+  templateUrl: './gouden-dief-four.component.html',
+  styleUrls: ['./gouden-dief-four.component.scss']
 })
-export class GoudenDiefTwoComponent {
+export class GoudenDiefFourComponent {
 
   constructor(private router: Router) {}
 

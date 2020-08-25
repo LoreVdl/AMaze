@@ -4,11 +4,11 @@ import {GoudenDiefService} from '../gouden-dief.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-gouden-dief-one',
-  templateUrl: './gouden-dief-one.component.html',
-  styleUrls: ['./gouden-dief-one.component.scss']
+  selector: 'app-gouden-dief-three',
+  templateUrl: './gouden-dief-three.component.html',
+  styleUrls: ['./gouden-dief-three.component.scss']
 })
-export class GoudenDiefOneComponent implements OnInit {
+export class GoudenDiefThreeComponent implements OnInit {
 
   loginForm: FormGroup;
   code: FormControl = new FormControl('');
@@ -24,10 +24,9 @@ export class GoudenDiefOneComponent implements OnInit {
   }
 
   submit(): void {
-    this.goudenDiefService.setInputCode('codePageOne', this.code.value);
-
-    if (this.goudenDiefService.getInputCode('codePageOne') === this.goudenDiefService.codePageOne) {
-      this.router.navigate(['degoudendief/pageTwo']);
+    this.goudenDiefService.setInputCode('codePageThree', this.code.value);
+    if (this.goudenDiefService.codePageThree.includes(this.goudenDiefService.getInputCode('codePageThree').toLowerCase())) {
+      this.router.navigate(['degoudendief/pageFour']);
     } else {
       this.showErrorScreen = true;
       this.code.setValue('');
@@ -37,5 +36,4 @@ export class GoudenDiefOneComponent implements OnInit {
       }, 800);
     }
   }
-
 }

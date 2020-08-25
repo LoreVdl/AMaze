@@ -4,6 +4,8 @@ import {GoudenDiefOneComponent} from './gouden-dief-one/gouden-dief-one.componen
 import {GoudenDiefLoginGuard} from './gouden-dief-login.guard';
 import {GoudenDiefTwoComponent} from './gouden-dief-two/gouden-dief-two.component';
 import {CookieService} from 'ngx-cookie-service';
+import {GoudenDiefThreeComponent} from './gouden-dief-three/gouden-dief-three.component';
+import {GoudenDiefFourComponent} from "./gouden-dief-four/gouden-dief-four.component";
 
 
 const routes: Routes = [
@@ -18,7 +20,20 @@ const routes: Routes = [
   {
     path: 'pageTwo',
     component: GoudenDiefTwoComponent,
-    canActivate: [GoudenDiefLoginGuard]
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageTwo'}
+  },
+  {
+    path: 'pageThree',
+    component: GoudenDiefThreeComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageThree'}
+  },
+  {
+    path: 'pageFour',
+    component: GoudenDiefFourComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageFour'}
   }
 ];
 

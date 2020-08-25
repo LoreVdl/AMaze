@@ -4,13 +4,17 @@ import { GoudenDiefOneComponent } from './gouden-dief-one/gouden-dief-one.compon
 import {GoudenDiefRoutingModule} from './gouden-dief-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GoudenDiefTwoComponent } from './gouden-dief-two/gouden-dief-two.component';
+import { GoudenDiefThreeComponent } from './gouden-dief-three/gouden-dief-three.component';
+import { GoudenDiefFourComponent } from './gouden-dief-four/gouden-dief-four.component';
 
 
 
 @NgModule({
   declarations: [
     GoudenDiefOneComponent,
-    GoudenDiefTwoComponent
+    GoudenDiefTwoComponent,
+    GoudenDiefThreeComponent,
+    GoudenDiefFourComponent
   ],
     imports: [
         CommonModule,

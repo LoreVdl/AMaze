@@ -1,4 +1,5 @@
 .body {
+  align-items: center;
   background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -8,12 +9,6 @@
   width: 100vw;
 }
 
-.title {
-  grid-column: 8 / span 18;
-  margin-top: 20%;
-  width: 100%;
-}
-
-.input {
-  margin-top: -110%;
+.input__label {
+  height: auto;
 }

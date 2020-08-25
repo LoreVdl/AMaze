@@ -12,7 +12,7 @@
   color: #fff;
   font-family: 'trueblood';
   display: flex;
-  grid-column: 5 / span 23;
+  grid-column: 5 / span 24;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
@@ -54,6 +54,7 @@
     margin-left: 8%;
     outline: none;
     padding: 10px;
+    text-align: center;
     width: 84%;
   }
 
@@ -73,5 +74,11 @@
   flex-direction: column;
   grid-column: 29 / span 2;
   justify-content: flex-end;
+  margin-bottom: 20px;
   width: 100%;
+}
+
+.error {
+  background-color: rgba(#e64607, 0.5);
+  background-blend-mode: multiply;
 }
