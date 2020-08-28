@@ -12,10 +12,16 @@
   color: #fff;
   font-family: 'trueblood';
   display: flex;
+  flex-direction: column;
   grid-column: 5 / span 24;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
+
+  &__icon {
+    margin-top: 100px;
+    width: 25%;
+  }
 }
 
 .form-container {
@@ -82,3 +88,4 @@
   background-color: rgba(#e64607, 0.5);
   background-blend-mode: multiply;
 }
+

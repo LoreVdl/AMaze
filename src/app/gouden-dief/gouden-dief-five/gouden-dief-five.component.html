@@ -1,0 +1,16 @@
+<div class="body" [ngClass]="{'error': showErrorScreen}">
+  <div class="l-wrap">
+    <div class="tail">
+      <img src="../../../assets/gouden-dief-icons/snake_tail.svg">
+    </div>
+    <div class="snake-box"
+         *ngFor="let box of boxes"
+         [id]="box.name"
+         [ngStyle]="{'height.px': getSize(), 'background-color': getColor(box), 'grid-column': box.styling, 'border': getBorder(box)}"
+         (click)="toggleBox(box)">
+    </div>
+    <div class="head">
+      <img src="../../../assets/gouden-dief-icons/snake_head.svg">
+    </div>
+  </div>
+</div>

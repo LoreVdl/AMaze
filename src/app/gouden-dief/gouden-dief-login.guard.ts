@@ -11,7 +11,6 @@ export class GoudenDiefLoginGuard implements CanActivate {
               private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
-    console.log(route.data.page);
     switch (route.data.page) {
       case 'pageTwo':
       case 'pageThree':
@@ -28,6 +27,16 @@ export class GoudenDiefLoginGuard implements CanActivate {
           return true;
         } else {
           this.router.navigate(['/degoudendief/pageThree']);
+          return false;
+        }
+      case 'pageSix':
+      case 'pageSeven':
+        if (this.service.getInputCode('codePageOne') === this.service.codePageOne &&
+          (this.service.codePageThree.includes(this.service.getInputCode('codePageThree').toLowerCase())) &&
+          (this.service.getInputCode('codePageFive') === this.service.codePageFive.sort().join(''))) {
+          return true;
+        } else {
+          this.router.navigate(['/degoudendief/pageFive']);
           return false;
         }
       default:

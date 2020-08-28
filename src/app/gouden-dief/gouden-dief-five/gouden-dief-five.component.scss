@@ -1,0 +1,39 @@
+.body {
+  align-items: center;
+  background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.l-wrap {
+  grid-column-gap: 0;
+  grid-template-columns: repeat(32, 1fr);
+}
+
+.clicked {
+  background-color: #000000;
+  border: none;
+}
+
+.tail {
+  grid-column: 7 / span 5;
+
+  img {
+    width: 100%;
+  }
+}
+
+.head {
+  grid-column: 24 / span 4;
+  width: 100%;
+}
+
+.snake-box {
+  background-color: #fff;
+  border: 0.1px solid lightgray;
+  grid-column: 10 / span 1;
+}
