@@ -5,10 +5,17 @@ import {GoudenDiefLoginGuard} from './gouden-dief-login.guard';
 import {GoudenDiefTwoComponent} from './gouden-dief-two/gouden-dief-two.component';
 import {CookieService} from 'ngx-cookie-service';
 import {GoudenDiefThreeComponent} from './gouden-dief-three/gouden-dief-three.component';
-import {GoudenDiefFourComponent} from "./gouden-dief-four/gouden-dief-four.component";
-import {GoudenDiefFiveComponent} from "./gouden-dief-five/gouden-dief-five.component";
-import {GoudenDiefSixComponent} from "./gouden-dief-six/gouden-dief-six.component";
-import {GoudenDiefSevenComponent} from "./gouden-dief-seven/gouden-dief-seven.component";
+import {GoudenDiefFourComponent} from './gouden-dief-four/gouden-dief-four.component';
+import {GoudenDiefFiveComponent} from './gouden-dief-five/gouden-dief-five.component';
+import {GoudenDiefSixComponent} from './gouden-dief-six/gouden-dief-six.component';
+import {GoudenDiefSevenComponent} from './gouden-dief-seven/gouden-dief-seven.component';
+import {GoudenDiefEighthComponent} from './gouden-dief-eighth/gouden-dief-eighth.component';
+import {GoudenDiefNineComponent} from './gouden-dief-nine/gouden-dief-nine.component';
+import {GoudenDiefTenComponent} from './gouden-dief-ten/gouden-dief-ten.component';
+import {GoudenDiefElevenComponent} from './gouden-dief-eleven/gouden-dief-eleven.component';
+import {GoudenDiefTwelveComponent} from './gouden-dief-twelve/gouden-dief-twelve.component';
+import {GoudenDiefThirteenComponent} from "./gouden-dief-thirteen/gouden-dief-thirteen.component";
+import {GoudenDiefFourteenComponent} from "./gouden-dief-fourteen/gouden-dief-fourteen.component";
 
 
 const routes: Routes = [
@@ -55,6 +62,48 @@ const routes: Routes = [
     component: GoudenDiefSevenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageSeven'}
+  },
+  {
+    path: 'pageEighth',
+    component: GoudenDiefEighthComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageEighth'}
+  },
+  {
+    path: 'pageNine',
+    component: GoudenDiefNineComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageNine'}
+  },
+  {
+    path: 'pageTen',
+    component: GoudenDiefTenComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageTen'}
+  },
+  {
+    path: 'pageEleven',
+    component: GoudenDiefElevenComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageEleven'}
+  },
+  {
+    path: 'pageTwelve',
+    component: GoudenDiefTwelveComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageTwelve'}
+  },
+  {
+    path: 'pageThirteen',
+    component: GoudenDiefThirteenComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageThirteen'}
+  },
+  {
+    path: 'pageFourteen',
+    component: GoudenDiefFourteenComponent,
+    canActivate: [GoudenDiefLoginGuard],
+    data: {page: 'pageFourteen'}
   }
 ];
 

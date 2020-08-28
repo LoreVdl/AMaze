@@ -22,7 +22,7 @@ export class GoudenDiefSevenComponent {
       this.goudenDiefService.setInputCode('codePageSeven', this.inputCode.join(''));
       if (this.goudenDiefService.codePageSevenOne.join('') === this.goudenDiefService.getInputCode('codePageSeven') ||
         this.goudenDiefService.codePageSevenTwo.join('') === this.goudenDiefService.getInputCode('codePageSeven')) {
-        this.router.navigate(['degoudendief/pageSix']);
+        this.router.navigate(['degoudendief/pageEighth']);
       } else {
         this.showErrorScreen = true;
         this.inputCode = [];

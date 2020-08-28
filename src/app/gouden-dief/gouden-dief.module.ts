@@ -9,6 +9,13 @@ import { GoudenDiefFourComponent } from './gouden-dief-four/gouden-dief-four.com
 import { GoudenDiefFiveComponent } from './gouden-dief-five/gouden-dief-five.component';
 import { GoudenDiefSixComponent } from './gouden-dief-six/gouden-dief-six.component';
 import { GoudenDiefSevenComponent } from './gouden-dief-seven/gouden-dief-seven.component';
+import { GoudenDiefEighthComponent } from './gouden-dief-eighth/gouden-dief-eighth.component';
+import { GoudenDiefNineComponent } from './gouden-dief-nine/gouden-dief-nine.component';
+import { GoudenDiefTenComponent } from './gouden-dief-ten/gouden-dief-ten.component';
+import { GoudenDiefElevenComponent } from './gouden-dief-eleven/gouden-dief-eleven.component';
+import { GoudenDiefTwelveComponent } from './gouden-dief-twelve/gouden-dief-twelve.component';
+import { GoudenDiefThirteenComponent } from './gouden-dief-thirteen/gouden-dief-thirteen.component';
+import { GoudenDiefFourteenComponent } from './gouden-dief-fourteen/gouden-dief-fourteen.component';
 
 
 
@@ -20,7 +27,14 @@ import { GoudenDiefSevenComponent } from './gouden-dief-seven/gouden-dief-seven.
     GoudenDiefFourComponent,
     GoudenDiefFiveComponent,
     GoudenDiefSixComponent,
-    GoudenDiefSevenComponent
+    GoudenDiefSevenComponent,
+    GoudenDiefEighthComponent,
+    GoudenDiefNineComponent,
+    GoudenDiefTenComponent,
+    GoudenDiefElevenComponent,
+    GoudenDiefTwelveComponent,
+    GoudenDiefThirteenComponent,
+    GoudenDiefFourteenComponent
   ],
     imports: [
         CommonModule,

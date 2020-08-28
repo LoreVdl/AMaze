@@ -165,12 +165,15 @@ export class GoudenDiefFiveComponent implements OnInit {
 
     if (this.clickedBoxes.includes(value.name)) {
       const index = this.clickedBoxes.indexOf(value.name);
-      this.clickedBoxes.splice(index);
+      console.log(index);
+      this.clickedBoxes.splice(index, 1);
     } else {
       this.clickedBoxes.push(value.name);
     }
 
     this.goudenDiefService.setInputCode('codePageFive', this.clickedBoxes.sort().join(''));
+    console.log(this.clickedBoxes.sort().join(','));
+    console.log(this.goudenDiefService.codePageFive.sort().join(','));
 
     if (this.clickedBoxes.sort().join(',') === this.goudenDiefService.codePageFive.sort().join(',')) {
       this.router.navigate(['degoudendief/pageSix']);

@@ -22,6 +22,12 @@ export class GoudenDiefService {
 
   readonly codePageSevenTwo = ['2', '1', '3', '3', '3', '2', '3', '3', '1', '3'];
 
+  readonly codePageNine = 'migratie';
+
+  readonly codePageEleven = '4293';
+
+  readonly codePageThirteen = '4216';
+
   $inputCode: string;
 
   setInputCode(code: string, input: string) {
