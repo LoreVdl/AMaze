@@ -12,7 +12,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const one = this.service.getInputCode('codePageOne') === this.service.codePageOne;
-    const two = this.service.codePageThree.includes(this.service.getInputCode('codePageThree').toLowerCase());
+    const two = this.service.codePageThree.includes(this.service.getInputCode('codePageThree'));
     const three = this.service.getInputCode('codePageFive') === this.service.codePageFive.sort().join('');
     const four = this.service.getInputCode('codePageSeven') === this.service.codePageSevenOne.join('') ||
       this.service.getInputCode('codePageSeven') === this.service.codePageSevenTwo.join('');

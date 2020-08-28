@@ -172,11 +172,11 @@ export class GoudenDiefFiveComponent implements OnInit {
     }
 
     this.goudenDiefService.setInputCode('codePageFive', this.clickedBoxes.sort().join(''));
-    console.log(this.clickedBoxes.sort().join(','));
-    console.log(this.goudenDiefService.codePageFive.sort().join(','));
 
     if (this.clickedBoxes.sort().join(',') === this.goudenDiefService.codePageFive.sort().join(',')) {
-      this.router.navigate(['degoudendief/pageSix']);
+      setTimeout(() => {
+        this.router.navigate(['degoudendief/pageSix']);
+      }, 800);
     }
   }
 
