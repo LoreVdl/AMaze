@@ -8,7 +8,7 @@ export class GoudenDiefService {
 
   constructor(private cookieService: CookieService) { }
 
-  readonly codePageOne = 'Sch8tt2nJ8g2rs';
+  readonly codePageOne = 'Sch8tt2nJ8g2r';
 
   readonly codePageThree = [
     'sir winston churchill',
@@ -24,7 +24,7 @@ export class GoudenDiefService {
 
   readonly codePageNine = 'migratie';
 
-  readonly codePageEleven = '4293';
+  readonly codePageEleven = '2394';
 
   readonly codePageThirteen = '4216';
 

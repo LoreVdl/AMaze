@@ -182,7 +182,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   getColor(value): string {
     if (value.clicked) {
-      return '#000';
+      return '#a83103';
     } else {
       return '#fff';
     }
@@ -190,7 +190,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   getBorder(value): string {
     if (value.clicked) {
-      return '0.1px solid #000';
+      return '0.1px solid #a83103';
     } else {
       return '0.1px solid lightgray';
     }
