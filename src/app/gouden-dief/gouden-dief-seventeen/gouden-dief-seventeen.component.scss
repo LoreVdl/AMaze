@@ -1,0 +1,51 @@
+@import "src/assets/css/fonts";
+@import "src/assets/css/font-size";
+
+.body {
+  align-items: center;
+  background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.input__label {
+  height: 60%;
+}
+
+.input {
+  grid-column: 10 / span 13;
+
+  &__field {
+    @include medium;
+  }
+}
+
+.progression-meter {
+  background-color: #fff;
+  display: block;
+  height: 15px;
+  grid-column: 11 / span 11;
+  margin-top: 10%;
+  position: relative;
+  width: 100%;
+}
+
+.meter-filled {
+  background-color: #a83103;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.meter-unfilled {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}

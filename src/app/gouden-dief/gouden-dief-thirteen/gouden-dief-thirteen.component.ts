@@ -31,10 +31,10 @@ export class GoudenDiefThirteenComponent implements OnInit {
 
   submit(): void {
     const code = this.code1.value + this.code2.value + this.code3.value + this.code4.value;
-    this.goudenDiefService.setInputCode('codePageEleven', code);
+    this.goudenDiefService.setInputCode('codePageThirteen', code.toString());
 
-    if (this.goudenDiefService.getInputCode('codePageEleven') === this.goudenDiefService.codePageEleven) {
-      this.router.navigate(['degoudendief/pageTwelve']);
+    if (this.goudenDiefService.getInputCode('codePageThirteen') === this.goudenDiefService.codePageThirteen) {
+      this.router.navigate(['degoudendief/pageFourteen']);
     } else {
       this.showErrorScreen = true;
       this.code1.setValue('');

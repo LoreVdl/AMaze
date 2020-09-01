@@ -1,33 +1,35 @@
 <div class="body" [ngClass]="{'error': showErrorScreen}">
   <div class="l-wrap">
-    <div class="form-container">
-      <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
-        <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
-        <label class="input__label">
-          <input class="input__field" formControlName="code1">
-        </label>
-      </form>
+    <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
+      <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
+      <label class="input__label">
+        <input class="input__field" formControlName="code1">
+      </label>
+    </form>
+    <p class="text">STAVEN GOUD</p>
 
-      <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
-        <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
-        <label class="input__label">
-          <input class="input__field" formControlName="code2">
-        </label>
-      </form>
+    <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
+      <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
+      <label class="input__label">
+        <input class="input__field" formControlName="code2">
+      </label>
+    </form>
+    <p class="text">DIAMANTEN</p>
 
-      <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
-        <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
-        <label class="input__label">
-          <input class="input__field" formControlName="code3">
-        </label>
-      </form>
+    <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
+      <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
+      <label class="input__label">
+        <input class="input__field" formControlName="code3">
+      </label>
+    </form>
+    <p class="text">SCHALEN</p>
 
-      <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
-        <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
-        <label class="input__label">
-          <input class="input__field" formControlName="code4">
-        </label>
-      </form>
-    </div>
+    <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
+      <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
+      <label class="input__label">
+        <input class="input__field" formControlName="code4">
+      </label>
+    </form>
+    <p class="text">PARELSNOEREN</p>
   </div>
 </div>

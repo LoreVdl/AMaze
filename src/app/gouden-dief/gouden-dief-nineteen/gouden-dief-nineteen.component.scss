@@ -1,0 +1,25 @@
+.body {
+  align-items: center;
+  display: flex;
+  background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.l-wrap {
+  align-items: center;
+}
+
+.projects-list {
+  align-items: center;
+  margin-bottom: 7%;
+  margin-top: 7%;
+
+  img {
+    width: 100%;
+  }
+}

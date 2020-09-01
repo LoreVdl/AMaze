@@ -19,6 +19,8 @@ export class GoudenDiefLoginGuard implements CanActivate {
     const five = this.service.getInputCode('codePageNine') === this.service.codePageNine.toLowerCase();
     const six = this.service.getInputCode('codePageEleven') === this.service.codePageEleven.toLowerCase();
     const seven = this.service.getInputCode('codePageThirteen') === this.service.codePageThirteen.toLowerCase();
+    const eighth = this.service.getInputCode('codePageFifteen') === this.service.codePageFifteen.toLowerCase();
+    const nine = this.service.getInputCode('codePageSeventeen') === this.service.codePageSeventeen;
 
     switch (route.data.page) {
       case 'pageTwo':
@@ -75,6 +77,22 @@ export class GoudenDiefLoginGuard implements CanActivate {
           return true;
         } else {
           this.router.navigate(['/degoudendief/pageThirteen']);
+          return false;
+        }
+      case 'pageSixteen':
+      case 'pageSeventeen':
+        if (one && two && three && four && five && six && seven && eighth) {
+          return true;
+        } else {
+          this.router.navigate(['/degoudendief/pageFifteen']);
+          return false;
+        }
+      case 'pageEighteen':
+      case 'pageNineteen':
+        if (one && two && three && four && five && six && seven && eighth && nine) {
+          return true;
+        } else {
+          this.router.navigate(['/degoudendief/pageSeventeen']);
           return false;
         }
       default:

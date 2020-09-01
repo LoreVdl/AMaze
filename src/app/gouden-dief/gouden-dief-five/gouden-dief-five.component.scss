@@ -20,15 +20,18 @@
 }
 
 .tail {
-  grid-column: 7 / span 5;
-
-  img {
-    width: 100%;
-  }
+  align-self: flex-end;
+  grid-column: 6 /span 4;
+  height: 100%;
+  justify-self: flex-end;
+  z-index: 999;
 }
 
 .head {
-  grid-column: 24 / span 4;
+  grid-column: 23 / span 4;
+  margin-top: -45%;
+  transform: translateY(55%);
+  margin-left: -7%;
   width: 100%;
 }
 

@@ -1,3 +1,6 @@
+@import "src/assets/css/fonts";
+@import "src/assets/css/font-size";
+
 .body {
   align-items: center;
   background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
@@ -6,13 +9,35 @@
   background-size: cover;
   display: flex;
   height: 100vh;
-  width: 100vw;
+}
+
+.l-wrap {
+  align-items: center;
 }
 
 .input__label {
-  height: auto;
+  height: 50%;
 }
 
-.form-container {
-  grid-column: 10 / span 5;
+.input {
+  align-items: center;
+  display: flex;
+  grid-column: 12 / span 4;
+  justify-content: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  position: relative;
+
+  &__field {
+    margin-left: 13%;
+    width: 75%;
+  }
+}
+
+.text {
+  @include large;
+  color: #fff;
+  font-family: "trueblood";
+  grid-column: 16 / span 7;
+  margin: 0 0 0 10%;
 }

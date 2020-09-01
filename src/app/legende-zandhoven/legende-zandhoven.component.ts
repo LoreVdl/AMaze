@@ -15,7 +15,7 @@ export class LegendeZandhovenComponent implements OnInit {
   }
 
   downloadPdf() {
-    const pdfUrl = './assets/sample.pdf';
+    const pdfUrl = './assets/dagboek.pdf';
     const pdfName = 'de_legende_van_zandhoven.pdf';
     FileSaver.saveAs(pdfUrl, pdfName);
   }

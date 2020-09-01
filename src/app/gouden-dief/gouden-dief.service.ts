@@ -16,7 +16,7 @@ export class GoudenDiefService {
     'churchill'
   ];
 
-  readonly  codePageFive = ['X', 'Y', 'Z'];
+  readonly  codePageFive = ['U', 'E', 'G', 'S', 'M', 'T'];
 
   readonly codePageSevenOne = ['2', '3', '3', '1', '3', '2', '1', '3', '3', '3'];
 
@@ -27,6 +27,10 @@ export class GoudenDiefService {
   readonly codePageEleven = '2394';
 
   readonly codePageThirteen = '4216';
+
+  readonly codePageFifteen = 'RTGMP';
+
+  readonly codePageSeventeen = 'true';
 
   $inputCode: string;
 

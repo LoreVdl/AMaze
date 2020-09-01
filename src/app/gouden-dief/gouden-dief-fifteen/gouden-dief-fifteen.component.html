@@ -1,0 +1,10 @@
+<div class="body" [ngClass]="{'error': showErrorScreen}">
+  <div class="l-wrap">
+    <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
+      <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
+      <label class="input__label">
+        <input class="input__field" formControlName="code">
+      </label>
+    </form>
+  </div>
+</div>

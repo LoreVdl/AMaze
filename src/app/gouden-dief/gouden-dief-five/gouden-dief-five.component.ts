@@ -20,47 +20,57 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   readonly boxes = [
     {
-      name: 'A',
+      name: 'Y',
       clicked: false,
-      styling: '12 / span 1'
-    },
-    {
-      name: 'B',
-      clicked: false,
-      styling: '13 / span 1'
-    },
-    {
-      name: 'C',
-      clicked: false,
-      styling: '14 / span 1'
-    },
-    {
-      name: 'D',
-      clicked: false,
-      styling: '15 / span 1'
+      styling: '10 / span 1'
     },
     {
       name: 'E',
       clicked: false,
-      styling: '16 / span 1'
+      styling: '11 / span 1'
+    },
+    {
+      name: 'Z',
+      clicked: false,
+      styling: '12 / span 1'
+    },
+    {
+      name: 'T',
+      clicked: false,
+      styling: '13 / span 1'
     },
     {
       name: 'F',
       clicked: false,
+      styling: '14 / span 1'
+    },
+    {
+      name: 'S',
+      clicked: false,
+      styling: '15 / span 1'
+    },
+    {
+      name: 'W',
+      clicked: false,
+      styling: '16 / span 1'
+    },
+    {
+      name: 'K',
+      clicked: false,
       styling: '17 / span 1'
     },
     {
-      name: 'G',
+      name: 'D',
       clicked: false,
-      styling: '18 / span 1'
+      styling: '17 / span 1'
     },
     {
-      name: 'H',
+      name: 'P',
       clicked: false,
-      styling: '18/ span 1'
+      styling: '13 / span 1'
     },
     {
-      name: 'I',
+      name: 'Q',
       clicked: false,
       styling: '14 / span 1'
     },
@@ -70,79 +80,74 @@ export class GoudenDiefFiveComponent implements OnInit {
       styling: '15 / span 1'
     },
     {
-      name: 'K',
-      clicked: false,
-      styling: '16 / span 1'
-    },
-    {
-      name: 'L',
-      clicked: false,
-      styling: '17 / span 1'
-    },
-    {
       name: 'M',
       clicked: false,
-      styling: '18 / span 1'
-    },
-    {
-      name: 'N',
-      clicked: false,
-      styling: '14 / span 1'
-    },
-    {
-      name: 'O',
-      clicked: false,
-      styling: '14 / span 1'
-    },
-    {
-      name: 'P',
-      clicked: false,
-      styling: '14 / span 1'
-    },
-    {
-      name: 'R',
-      clicked: false,
-      styling: '15 / span 1'
-    },
-    {
-      name: 'S',
-      clicked: false,
       styling: '16 / span 1'
-    },
-    {
-      name: 'T',
-      clicked: false,
-      styling: '17 / span 1'
-    },
-    {
-      name: 'U',
-      clicked: false,
-      styling: '18 / span 1'
-    },
-    {
-      name: 'V',
-      clicked: false,
-      styling: '19 / span 1'
-    },
-    {
-      name: 'W',
-      clicked: false,
-      styling: '20 / span 1'
     },
     {
       name: 'X',
       clicked: false,
+      styling: '17 / span 1'
+    },
+    {
+      name: 'B',
+      clicked: false,
+      styling: '13 / span 1'
+    },
+    {
+      name: 'I',
+      clicked: false,
+      styling: '13 / span 1'
+    },
+    {
+      name: 'O',
+      clicked: false,
+      styling: '13 / span 1'
+    },
+    {
+      name: 'C',
+      clicked: false,
+      styling: '14 / span 1'
+    },
+    {
+      name: 'A',
+      clicked: false,
+      styling: '15 / span 1'
+    },
+    {
+      name: 'R',
+      clicked: false,
+      styling: '16 / span 1'
+    },
+    {
+      name: 'H',
+      clicked: false,
+      styling: '17 / span 1'
+    },
+    {
+      name: 'V',
+      clicked: false,
+      styling: '18 / span 1'
+    },
+    {
+      name: 'G',
+      clicked: false,
+      styling: '19 / span 1'
+    },
+    {
+      name: 'U',
+      clicked: false,
+      styling: '20 / span 1'
+    },
+    {
+      name: 'L',
+      clicked: false,
       styling: '21 / span 1'
     },
     {
-      name: 'Y',
+      name: 'N',
       clicked: false,
       styling: '22 / span 1'
-    },
-    {
-      name: 'Z',
-      clicked: false,
-      styling: '23 / span 1'
     }
   ];
 
