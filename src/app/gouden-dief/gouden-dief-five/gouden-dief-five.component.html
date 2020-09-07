@@ -1,6 +1,9 @@
 <div class="body" [ngClass]="{'error': showErrorScreen}">
   <div class="l-wrap">
-    <img src="../../../assets/gouden-dief-icons/snake_tail.svg" class="tail">
+    <div class="snake-box"
+         [ngStyle]="{'display': 'hidden', 'border': 'none'}">
+    </div>
+    <img src="../../../assets/gouden-dief-icons/snake_tail.svg" class="tail" [ngStyle]="{'height.px': getSize()}">
     <div class="snake-box"
          *ngFor="let box of boxes"
          [id]="box.name"
