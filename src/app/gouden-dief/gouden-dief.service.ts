@@ -32,6 +32,8 @@ export class GoudenDiefService {
 
   readonly codePageSeventeen = 'true';
 
+  readonly codePageNineteen = ['2', '4', '3', '7', '5', '8', '6', '1'];
+
   $inputCode: string;
 
   setInputCode(code: string, input: string) {

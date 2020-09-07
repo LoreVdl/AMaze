@@ -1,1 +1,14 @@
-<p>gouden-dief-twenty-one works!</p>
+<div class="body">
+  <div class="l-wrap">
+    <img class="title" src="../../../assets/gouden-dief-icons/logo.svg">
+    <div class="text-container">
+      <p>Proficiat, jullie ontrafelde de mysteries van de tempel en losten de gouden dief op. Leuk, deel het met je vrienden en familie en laat je email achter voor updates.</p>
+    </div>
+    <form class="input"
+          [formGroup]="loginForm"
+          (submit)="submit($event)"
+          action="#">
+      <input class="input__field" formControlName="email" name="email">
+    </form>
+  </div>
+</div>

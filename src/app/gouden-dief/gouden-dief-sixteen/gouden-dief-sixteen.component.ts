@@ -11,6 +11,6 @@ export class GoudenDiefSixteenComponent {
   constructor(private router: Router) {}
 
   naviagte(): void {
-    this.router.navigate(['degoudendief/pageFive']);
+    this.router.navigate(['degoudendief/pageSeventeen']);
   }
 }

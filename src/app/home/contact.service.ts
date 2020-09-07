@@ -29,4 +29,9 @@ export class ContactService {
         }, 3000);
       });
   }
+
+  postEmail(input: Event): void {
+    input.preventDefault();
+    emailjs.sendForm('smtp_server', 'template_i9emuzv', input.target as HTMLFormElement, 'user_kK9wrQ1KXTyc7mlfbQVXi');
+  }
 }

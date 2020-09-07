@@ -1,66 +1,121 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Router} from '@angular/router';
+import {GoudenDiefService} from '../gouden-dief.service';
 
 @Component({
   selector: 'app-gouden-dief-nineteen',
   templateUrl: './gouden-dief-nineteen.component.html',
   styleUrls: ['./gouden-dief-nineteen.component.scss']
 })
-export class GoudenDiefNineteenComponent implements OnInit {
+export class GoudenDiefNineteenComponent {
+
+  constructor(private router: Router,
+              private goudenDiefService: GoudenDiefService) {
+  }
+
+  clickedBoxes = [];
+  showErrorScreen = false;
 
   projects = [
     {
       styling: '10 / span 3',
-      name: 'Seven Mistakes',
+      name: 'seven_mistakes',
       imageUrl: '../../assets/gouden-dief-icons/seven_mistakes_button.svg',
-      clicked: false
+      clicked: false,
+      value: '1'
     },
     {
       styling: '13 / span 3',
-      name: 'Lost Painting',
+      name: 'lost_painting',
       imageUrl: '../../assets/gouden-dief-icons/lost_painting_button.svg',
-      clicked: false
+      clicked: false,
+      value: '2'
     },
     {
       styling: '16 / span 3',
-      name: 'Water Falls',
+      name: 'water_falls',
       imageUrl: '../../assets/gouden-dief-icons/water_falls_button.svg',
-      clicked: false
+      clicked: false,
+      value: '3'
     },
     {
       styling: '19 / span 3',
-      name: 'Alphabet Snake',
+      name: 'alphabet_snake',
       imageUrl: '../../assets/gouden-dief-icons/alphabet_snake_button.svg',
-      clicked: false
+      clicked: false,
+      value: '4'
     },
     {
       styling: '10 / span 3',
-      name: 'Counting Mazes',
+      name: 'counting_mazes',
       imageUrl: '../../assets/gouden-dief-icons/counting_mazes_button.svg',
-      clicked: false
+      clicked: false,
+      value: '5'
     },
     {
       styling: '13 / span 3',
-      name: 'Stary Skys',
+      name: 'stary_skys',
       imageUrl: '../../assets/gouden-dief-icons/stary_skys_button.svg',
-      clicked: false
+      clicked: false,
+      value: '6'
     },
     {
       styling: '16 / span 3',
-      name: 'Birds in Flags',
+      name: 'birds_in_flags',
       imageUrl: '../../assets/gouden-dief-icons/birds_in_flags_button.svg',
-      clicked: false
+      clicked: false,
+      value: '7'
     },
     {
       styling: '19 / span 3',
-      name: 'The right Balance',
+      name: 'the_right_balance',
       imageUrl: '../../assets/gouden-dief-icons/the_right_balance_button.svg',
-      clicked: false
+      clicked: false,
+      value: '8'
     }
   ];
 
-  constructor() { }
-
-  ngOnInit() {
+  getImage(value): string {
+    if (value.clicked) {
+      return '../../assets/gouden-dief-icons/' + value.name + '_A.svg';
+    } else {
+      return value.imageUrl;
+    }
   }
 
+  clickButton(value): void {
+    if (!value.clicked) {
+      this.playAudio();
+      this.clickedBoxes.push(value.value);
+
+      value.clicked = true;
+
+      if (this.projects.every(currentValue => currentValue.clicked)) {
+        this.goudenDiefService.setInputCode('codePageNineteen', this.clickedBoxes.join(''));
+
+        if (this.clickedBoxes.join('') === this.goudenDiefService.codePageNineteen.join('')) {
+          setTimeout(() => {
+            this.router.navigate(['degoudendief/pageTwenty']);
+          }, 800);
+        } else {
+          this.showErrorScreen = true;
+          this.clickedBoxes = [];
+
+          setTimeout(() => {
+            this.showErrorScreen = false;
+            for (const project of this.projects) {
+              project.clicked = false;
+            }
+          }, 800);
+        }
+      }
+    }
+  }
+
+  private playAudio() {
+    const audio = new Audio();
+    audio.src = '../../assets/sounds/trommel.wav';
+    audio.load();
+    audio.play();
+  }
 }

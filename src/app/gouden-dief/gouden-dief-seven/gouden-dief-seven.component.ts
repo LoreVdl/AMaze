@@ -17,6 +17,7 @@ export class GoudenDiefSevenComponent {
               private router: Router) { }
 
   clickButton(code: string) {
+    this.playAudio();
     this.inputCode.push(code);
     if (this.inputCode.length === 10) {
       this.goudenDiefService.setInputCode('codePageSeven', this.inputCode.join(''));
@@ -34,5 +35,12 @@ export class GoudenDiefSevenComponent {
         }, 800);
       }
     }
+  }
+
+  private playAudio() {
+    const audio = new Audio();
+    audio.src = '../../assets/sounds/trommel.wav';
+    audio.load();
+    audio.play();
   }
 }

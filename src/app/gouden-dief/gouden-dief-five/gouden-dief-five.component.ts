@@ -167,6 +167,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   toggleBox(value): void {
     value.clicked = !value.clicked;
+    this.playAudio();
 
     if (this.clickedBoxes.includes(value.name)) {
       const index = this.clickedBoxes.indexOf(value.name);
@@ -199,5 +200,12 @@ export class GoudenDiefFiveComponent implements OnInit {
     } else {
       return '0.1px solid lightgray';
     }
+  }
+
+  private playAudio() {
+    const audio = new Audio();
+    audio.src = '../../assets/sounds/trommel.wav';
+    audio.load();
+    audio.play();
   }
 }
