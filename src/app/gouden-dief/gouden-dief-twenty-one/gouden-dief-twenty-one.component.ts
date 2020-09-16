@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from '../../home/contact.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-gouden-dief-twenty-one',
@@ -11,7 +12,8 @@ export class GoudenDiefTwentyOneComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -22,5 +24,9 @@ export class GoudenDiefTwentyOneComponent implements OnInit {
   submit(formData): void {
     this.contactService.postEmail(formData);
     this.loginForm.reset();
+  }
+
+  naviagte(): void {
+    this.router.navigate(['/']);
   }
 }

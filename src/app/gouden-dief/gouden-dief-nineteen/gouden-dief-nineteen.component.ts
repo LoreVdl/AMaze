@@ -114,7 +114,7 @@ export class GoudenDiefNineteenComponent {
 
   private playAudio() {
     const audio = new Audio();
-    audio.src = '../../assets/sounds/trommel.wav';
+    audio.src = '../../assets/sounds/sound_the_end.wav';
     audio.load();
     audio.play();
   }

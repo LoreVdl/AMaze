@@ -26,7 +26,7 @@ export class GoudenDiefService {
 
   readonly codePageEleven = '2394';
 
-  readonly codePageThirteen = '4216';
+  readonly codePageThirteen = '52';
 
   readonly codePageFifteen = 'RTGMP';
 

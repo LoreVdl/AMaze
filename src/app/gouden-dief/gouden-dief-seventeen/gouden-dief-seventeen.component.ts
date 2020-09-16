@@ -26,19 +26,19 @@ export class GoudenDiefSeventeenComponent implements OnInit {
     value: 0
   };
 
-  private readonly answer1 = ['kameel', 'dromedaris'];
+  private readonly answer1 = ['kameel', 'dromedaris', 'koop'];
 
-  private readonly answer2 = ['spiegelbeeld', 'pop', 'meisje', 'spiegel'];
+  private readonly answer2 = ['spiegelbeeld', 'pop', 'spiegel'];
 
-  private readonly answer3 = ['jupiter', 'planeet'];
+  private readonly answer3 = ['jupiter', 'planeten', 'planeet'];
 
-  private readonly answer4 = ['WO', 'wereldoorlog', 'datum'];
+  private readonly answer4 = ['WO1', 'datum', '1914'];
 
-  private readonly answer5 = ['regenboog', 'kleur'];
+  private readonly answer5 = ['regenboog', 'geel'];
 
-  private readonly answer6 = ['ring', 'kleur'];
+  private readonly answer6 = ['olympisch', 'zwart', 'olympische'];
 
-  private readonly answer7 = ['vorm', 'cirkel'];
+  private readonly answer7 = ['vorm', 'figuur', 'hoek', 'cirkel', 'plaats'];
 
   private answers = [this.answer1, this.answer2, this.answer3, this.answer4, this.answer5, this.answer6, this.answer7];
 

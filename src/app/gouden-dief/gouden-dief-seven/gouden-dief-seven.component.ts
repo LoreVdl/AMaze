@@ -39,7 +39,7 @@ export class GoudenDiefSevenComponent {
 
   private playAudio() {
     const audio = new Audio();
-    audio.src = '../../assets/sounds/trommel.wav';
+    audio.src = '../../assets/sounds/sound_water_falls.wav';
     audio.load();
     audio.play();
   }

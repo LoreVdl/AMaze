@@ -30,7 +30,7 @@ export class GoudenDiefThirteenComponent implements OnInit {
   }
 
   submit(): void {
-    const code = this.code1.value + this.code2.value + this.code3.value + this.code4.value;
+    const code = +(this.code1.value * 3) + +(this.code2.value * 6) + +(this.code3.value * 4) + +(this.code4.value * 2);
     this.goudenDiefService.setInputCode('codePageThirteen', code.toString());
 
     if (this.goudenDiefService.getInputCode('codePageThirteen') === this.goudenDiefService.codePageThirteen) {

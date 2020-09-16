@@ -171,7 +171,6 @@ export class GoudenDiefFiveComponent implements OnInit {
 
     if (this.clickedBoxes.includes(value.name)) {
       const index = this.clickedBoxes.indexOf(value.name);
-      console.log(index);
       this.clickedBoxes.splice(index, 1);
     } else {
       this.clickedBoxes.push(value.name);
@@ -204,7 +203,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   private playAudio() {
     const audio = new Audio();
-    audio.src = '../../assets/sounds/trommel.wav';
+    audio.src = '../../assets/sounds/sound_alphabet_snake.wav';
     audio.load();
     audio.play();
   }
