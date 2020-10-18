@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   homeOffset: number = null;
   profileOffset: number = null;
   projectOffset: number = null;
+  aanbodOffset: number = null;
   shopOffset: number = null;
   contactOffset: number = null;
   isScrolling = false;
@@ -60,6 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('home', { static: true }) homeElement: ElementRef;
   @ViewChild('profile', { static: true }) profileElement: ElementRef;
   @ViewChild('project', { static: true }) projectElement: ElementRef;
+  @ViewChild('aanbod', { static: true }) aanbodElement: ElementRef;
   @ViewChild('shop', { static: true }) shopElement: ElementRef;
   @ViewChild('contact', { static: true }) contactElement: ElementRef;
 
@@ -101,6 +103,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.homeOffset = this.homeElement.nativeElement.offsetTop;
     this.profileOffset = this.profileElement.nativeElement.offsetTop;
     this.projectOffset = this.projectElement.nativeElement.offsetTop;
+    this.aanbodOffset = this.aanbodElement.nativeElement.offsetTop;
     this.shopOffset = this.shopElement.nativeElement.offsetTop;
     this.contactOffset = this.contactElement.nativeElement.offsetTop;
   }
@@ -112,8 +115,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.elementId = 'home';
       } else if (window.pageYOffset >= (this.profileOffset / 2) && window.pageYOffset < (this.projectOffset / 1.2)) {
         this.elementId = 'profile';
-      } else if (window.pageYOffset >= (this.projectOffset / 2) && window.pageYOffset < (this.shopOffset / 1.2)) {
+      } else if (window.pageYOffset >= (this.projectOffset / 2) && window.pageYOffset < (this.aanbodOffset / 1.2)) {
         this.elementId = 'projects';
+      } else if (window.pageYOffset >= (this.aanbodOffset / 2) && window.pageYOffset < (this.shopOffset / 1.2)) {
+        this.elementId = 'aanbod';
       } else if (window.pageYOffset >= (this.shopOffset / 2) && window.pageYOffset < (this.contactOffset / 1.2)) {
         this.elementId = 'shop';
       } else if (window.pageYOffset >= (this.contactOffset / 2)) {
@@ -138,13 +143,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   onSubmit(formData): void {
     this.contactService.postMessage(formData);
+    this.formData.reset();
   }
 
   getIconUrl(id: string): string {
     return '../../../assets/images/' + id + '.svg';
-  }
-
-  canShowHamburger(): boolean {
-    return this.elementId === 'projects' || this.elementId === 'shop' || this.elementId === 'profile' || this.elementId === 'contact';
   }
 }

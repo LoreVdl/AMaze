@@ -9,6 +9,17 @@
           (submit)="submit($event)"
           action="#">
       <input class="input__field" formControlName="email" name="email">
+      <ng-container [ngSwitch]="contactService.viewState">
+        <ng-template [ngSwitchCase]="ViewState.Success">
+          <img class="input__icon" src="../../../assets/gouden-dief-icons/the_right_balance_A.svg">
+        </ng-template>
+        <ng-template [ngSwitchCase]="ViewState.Loading">
+          <img class="input__icon" src="../../../assets/gouden-dief-icons/lost_painting_button.svg">
+        </ng-template>
+        <ng-template [ngSwitchCase]="ViewState.Error">
+          <img class="input__icon" src="../../../assets/gouden-dief-icons/alphabet_snake.svg">
+        </ng-template>
+      </ng-container>
     </form>
 
     <div class="arrow">

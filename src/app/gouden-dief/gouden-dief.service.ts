@@ -13,7 +13,8 @@ export class GoudenDiefService {
   readonly codePageThree = [
     'sir winston churchill',
     'winston churchill',
-    'churchill'
+    'churchill',
+    'sir churchill'
   ];
 
   readonly  codePageFive = ['U', 'E', 'G', 'S', 'M', 'T'];

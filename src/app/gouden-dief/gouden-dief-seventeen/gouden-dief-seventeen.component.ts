@@ -28,7 +28,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
 
   private readonly answer1 = ['kameel', 'dromedaris', 'koop'];
 
-  private readonly answer2 = ['spiegelbeeld', 'pop', 'spiegel'];
+  private readonly answer2 = ['pop', 'spiegel'];
 
   private readonly answer3 = ['jupiter', 'planeten', 'planeet'];
 
@@ -36,7 +36,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
 
   private readonly answer5 = ['regenboog', 'geel'];
 
-  private readonly answer6 = ['olympisch', 'zwart', 'olympische'];
+  private readonly answer6 = ['olympisch', 'zwart'];
 
   private readonly answer7 = ['vorm', 'figuur', 'hoek', 'cirkel', 'plaats'];
 
@@ -121,6 +121,12 @@ export class GoudenDiefSeventeenComponent implements OnInit {
           this.barMeter.value++;
           this.answers.splice(index, 1);
         }
+        break;
+      default:
+        this.showErrorScreen = true;
+        setTimeout(() => {
+          this.showErrorScreen = false;
+        }, 800);
         break;
     }
 

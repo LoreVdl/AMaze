@@ -25,6 +25,8 @@ export class HamburgerMenuComponent implements OnInit {
         return 'OVER ONS';
       case 'projects':
         return 'PROJECTEN';
+      case 'aanbod':
+        return 'AANBOD';
       case 'shop':
         return 'WEBSHOP';
       case 'contact':

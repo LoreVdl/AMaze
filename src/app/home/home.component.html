@@ -1,45 +1,36 @@
 <div class="body l-wrap" id="home" #home>
+  <app-hamburger-menu
+    [source]="getIconUrl(elementId)"
+    [elementId]="elementId"
+    class="hamburger-menu"
+    (scroll)="scroll($event)">
+  </app-hamburger-menu>
   <div class="twelve-col-grid logo">
     <img src="../../../assets/images/logo.svg" />
   </div>
 
-  <div class="button-nav">
-    <div class="button-nav__button" (click)="scroll('profile')">
-      <img class="nav__button" [src]="getIconUrl('profile')" />
-      <p>OVER ONS</p>
-    </div>
-
-    <div class="button-nav__button" (click)="scroll('projects')">
-      <img class="nav__button" [src]="getIconUrl('projects')" />
-      <p>PROJECTEN</p>
-    </div>
-
-    <div class="button-nav__button" (click)="scroll('shop')">
-      <img class="nav__button" [src]="getIconUrl('shop')" />
-      <p>WEBSHOP</p>
-    </div>
-
-    <div class="button-nav__button" (click)="scroll('contact')">
-      <img class="nav__button" [src]="getIconUrl('contact')" />
-      <p>CONTACT</p>
-    </div>
+  <div class="twelve-col-grid button-nav">
+    <img src="../../assets/images/arrows.svg" (click)="scroll('profile')">
   </div>
 </div>
 
 <div class="body l-wrap" id="profile" #profile>
   <div class="framework">
-    <p class="framework__text">
-      <strong>A Maze, mysterieus entertainment op maat</strong><br><br>
-      Het bouwen en bedenken van verrassende ervaringen op maat is waar A
-      Maze voor staat. We maken puzzels voor escape rooms en doorlopen
-      samen het hele proces: het thema van de kamer, daarbij passende puzzels
-      bedenken en ook ontwerpen, de juiste materialen vinden, bouwen en testen.<br> <br> Daarnaast creëren we
-      gepersonaliseerde spelen en activiteiten voor particulieren en bedrijven:
-      een speciale aankondiging brengen op een creative manier, nieuw leven
-      blazen in een vergeten project of iets te vieren met vrienden en familie, we bespreken samen wat uw wensen zijn. <br> <br> Tenslotte brengen we ook onze eigen kant en klare spelen op de markt die
-      zorgen voor een gezellig samenzijn met de nodige dosis puzzelplezier voor
-      jong en oud. <br> <br> Bekijk snel ons aanbod.
-    </p>
+    <div class="framework__text">
+      <p><strong>A Maze, mysterieus entertainment op maat</strong></p>
+      <p>Het bouwen en bedenken van verrassende ervaringen op maat is waar A
+        Maze voor staat. We maken puzzels voor escape rooms en doorlopen
+        samen het hele proces: het thema van de kamer, daarbij passende puzzels
+        bedenken en ook ontwerpen, de juiste materialen vinden, bouwen en testen.
+      </p>
+      <p>Daarnaast creëren we
+        gepersonaliseerde spelen en activiteiten voor particulieren en bedrijven:
+        een speciale aankondiging brengen op een creative manier, nieuw leven
+        blazen in een vergeten project of iets te vieren met vrienden en familie, we bespreken samen wat uw wensen zijn. <br> Tenslotte brengen we ook onze eigen kant en klare spelen op de markt die
+        zorgen voor een gezellig samenzijn met de nodige dosis puzzelplezier voor jong en oud.
+      </p>
+      <p class="clickable border" (click)="scroll('aanbod')">Bekijk snel ons aanbod.</p>
+    </div>
   </div>
   <app-small-navigatie
     class="two-col-grid small-nav"
@@ -47,13 +38,6 @@
     [activeElement]="elementId"
   >
   </app-small-navigatie>
-  <app-hamburger-menu
-    *ngIf="canShowHamburger()"
-    [source]="getIconUrl(elementId)"
-    [elementId]="elementId"
-    class="hamburger-menu"
-    (scroll)="scroll($event)"
-  ></app-hamburger-menu>
 </div>
 
 <div class="body" id="projects" #project>
@@ -66,6 +50,27 @@
     >
       <img src="{{ project.imageUrl }}" [routerLink]="project.url" />
     </div>
+  </div>
+</div>
+
+<div class="body l-wrap" id="aanbod" #aanbod>
+  <div class="aanbod">
+    <ul class="aanbod__bedrijven aanbod__list">
+      <li class="aanbod__title">Bedrijven</li>
+      <li>Een originele bedrijfsuitstap met je hele team.</li>
+      <li>Verrassende boodschappen brengen aan je collega's of werknemers.</li>
+      <li>Een escape spel op maat van jouw bedrijf.</li>
+      <li>Een creatieve teambuilding.</li>
+      <li>Kant en klare paketten uit onze webshop.</li>
+    </ul>
+    <ul class="aanbod__particulieren aanbod__list">
+      <li class="aanbod__title">Particulieren</li>
+      <li>Verjaardagsfeesten voor groot en klein.</li>
+      <li>Verrassende boodschappen brengen aan vrienden en familie.</li>
+      <li>Zoektochten en wandelingen naar de wensen van jouw familie.</li>
+      <li>Tover je huis om in een escape room.</li>
+      <li>Kant en klare paketten uit onze webshop.</li>
+    </ul>
   </div>
 </div>
 
@@ -194,5 +199,7 @@
     </p>
   </div>
 
-  <div class="contact__error-state" *ngSwitchCase="ViewState.Loading"></div>
+  <div class="contact__error-state" *ngSwitchCase="ViewState.Loading">
+    <img src="../../assets/images/zandloper.svg" class="contact__loading">
+  </div>
 </div>

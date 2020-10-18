@@ -1,6 +1,10 @@
 @import "src/assets/css/fonts";
 @import "src/assets/css/font-size";
 
+:host {
+  z-index: 2;
+}
+
 .hamburger {
   align-items: center;
   background-color: #fff;

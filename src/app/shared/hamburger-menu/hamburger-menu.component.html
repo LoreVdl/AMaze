@@ -1,7 +1,7 @@
 <div class="hamburger">
   <ng-container *ngTemplateOutlet="hamburgerMenuOpen ? openMenu : closedMenu"></ng-container>
   <div class="hamburger__element">
-    <img [src]="source">
+    <img [src]="source" *ngIf="elementId !== 'home'">
     <p>{{getElementName(elementId)}}</p>
   </div>
 </div>

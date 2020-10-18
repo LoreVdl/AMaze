@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from '../../home/contact.service';
 import {Router} from '@angular/router';
+import {ViewState} from '../../home/viewState.enum';
 
 @Component({
   selector: 'app-gouden-dief-twenty-one',
@@ -11,8 +12,9 @@ import {Router} from '@angular/router';
 export class GoudenDiefTwentyOneComponent implements OnInit {
 
   loginForm: FormGroup;
+  readonly ViewState = ViewState;
 
-  constructor(private contactService: ContactService,
+  constructor(public contactService: ContactService,
               private router: Router) { }
 
   ngOnInit() {

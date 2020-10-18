@@ -20,7 +20,22 @@ export class ContactService {
 
         setTimeout(() => {
           this.viewState = ViewState.Default;
-        }, 3000);
+        }, 5000);
+      }, (error) => {
+        this.viewState = ViewState.Error;
+
+        setTimeout(() => {
+          this.viewState = ViewState.Default;
+        }, 5000);
+      });
+  }
+
+  postEmail(input: Event): void {
+    input.preventDefault();
+    this.viewState = ViewState.Loading;
+    emailjs.sendForm('smtp_server', 'template_i9emuzv', input.target as HTMLFormElement, 'user_kK9wrQ1KXTyc7mlfbQVXi')
+      .then((result: EmailJSResponseStatus) => {
+        this.viewState = ViewState.Success;
       }, (error) => {
         this.viewState = ViewState.Error;
 
@@ -28,10 +43,5 @@ export class ContactService {
           this.viewState = ViewState.Default;
         }, 3000);
       });
-  }
-
-  postEmail(input: Event): void {
-    input.preventDefault();
-    emailjs.sendForm('smtp_server', 'template_i9emuzv', input.target as HTMLFormElement, 'user_kK9wrQ1KXTyc7mlfbQVXi');
   }
 }
