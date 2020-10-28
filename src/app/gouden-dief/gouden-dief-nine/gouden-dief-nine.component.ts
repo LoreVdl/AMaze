@@ -30,11 +30,12 @@ export class GoudenDiefNineComponent implements OnInit {
       this.router.navigate(['degoudendief/pageTen']);
     } else {
       this.showErrorScreen = true;
+      this.goudenDiefService.playAudio();
       this.code.setValue('');
 
       setTimeout(() => {
         this.showErrorScreen = false;
-      }, 800);
+      }, 1500);
     }
   }
 }

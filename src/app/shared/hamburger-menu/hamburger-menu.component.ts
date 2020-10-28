@@ -19,21 +19,6 @@ export class HamburgerMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  getElementName(id: string): string {
-    switch (id) {
-      case 'profile':
-        return 'OVER ONS';
-      case 'projects':
-        return 'PROJECTEN';
-      case 'aanbod':
-        return 'AANBOD';
-      case 'shop':
-        return 'WEBSHOP';
-      case 'contact':
-        return 'CONTACT';
-    }
-  }
-
   toggleMenu(): void {
     this.hamburgerMenuOpen = !this.hamburgerMenuOpen;
 
@@ -41,14 +26,6 @@ export class HamburgerMenuComponent implements OnInit {
       this.renderer.setStyle(document.body, 'overflow', 'hidden');
     } else {
       this.renderer.removeStyle(document.body, 'overflow');
-    }
-  }
-
-  getIconUrl(id: string): string {
-    if (this.elementId === id) {
-      return '../../../assets/images/' + id + '-green.svg';
-    } else {
-      return '../../../assets/images/' + id + '.svg';
     }
   }
 

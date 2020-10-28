@@ -8,4 +8,22 @@
       </label>
     </form>
   </div>
+
+  <div class="pop-up l-wrap" *ngIf="showPopUp">
+    <div class="pop-up__content">
+      <img src="../../../assets/gouden-dief-icons/old-paper-vintage-aged.png" class="pop-up__img">
+      <h1 class="pop-up__title">Instructies</h1>
+
+      <div class="pop-up__list">
+        <p>Zet het geluid van je computer aan.</p>
+        <p>Gebruik ENTER om verder te gaan.</p>
+        <p>Gebruik Google Chrome voor het beste resultaat.</p>
+      </div>
+
+      <div class="pop-up__button"
+           (click)="showPopUp = false">
+        <img src="../../../assets/gouden-dief-icons/play.svg">
+      </div>
+    </div>
+  </div>
 </div>

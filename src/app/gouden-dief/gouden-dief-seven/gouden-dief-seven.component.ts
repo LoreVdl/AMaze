@@ -28,11 +28,12 @@ export class GoudenDiefSevenComponent {
         }, 800);
       } else {
         this.showErrorScreen = true;
+        this.goudenDiefService.playAudio();
         this.inputCode = [];
 
         setTimeout(() => {
           this.showErrorScreen = false;
-        }, 800);
+        }, 1500);
       }
     }
   }

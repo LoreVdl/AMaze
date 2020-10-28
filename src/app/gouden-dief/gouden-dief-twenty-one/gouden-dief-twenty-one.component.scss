@@ -29,16 +29,28 @@
   &__field {
     @include medium;
     margin-left: 0;
+    height: 60%;
     width: 100%;
   }
 
   &__icon {
     position: absolute;
-    right: 5px;
-    width: 8%;
+    right: 20px;
+    width: 3%;
+  }
+
+  &__loading {
+    animation: spin 3.5s;
+    animation-iteration-count: infinite;
   }
 }
 
 .arrow {
   grid-column: 28/span 3
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
 }

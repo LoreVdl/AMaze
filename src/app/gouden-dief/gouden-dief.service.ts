@@ -29,7 +29,7 @@ export class GoudenDiefService {
 
   readonly codePageThirteen = '52';
 
-  readonly codePageFifteen = 'RTGMP';
+  readonly codePageFifteen = 'VTGMP';
 
   readonly codePageSeventeen = 'true';
 
@@ -48,5 +48,12 @@ export class GoudenDiefService {
     } else {
       return this.$inputCode;
     }
+  }
+
+  playAudio() {
+    const audio = new Audio();
+    audio.src = '../../assets/sounds/sound_wrong.wav';
+    audio.load();
+    audio.play();
   }
 }

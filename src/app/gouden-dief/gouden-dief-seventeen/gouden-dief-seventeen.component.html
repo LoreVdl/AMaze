@@ -3,7 +3,7 @@
     <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
       <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
       <label class="input__label">
-        <textarea class="input__field" formControlName="code" (keydown)="pressed($event)"></textarea>
+        <textarea class="input__field" placeholder="leugens..." formControlName="code" (keydown)="pressed($event)"></textarea>
       </label>
     </form>
     <div class="progression-meter">

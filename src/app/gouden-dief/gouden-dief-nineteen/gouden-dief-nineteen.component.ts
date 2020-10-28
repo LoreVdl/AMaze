@@ -99,6 +99,7 @@ export class GoudenDiefNineteenComponent {
           }, 800);
         } else {
           this.showErrorScreen = true;
+          this.goudenDiefService.playAudio();
           this.clickedBoxes = [];
 
           setTimeout(() => {
@@ -106,7 +107,7 @@ export class GoudenDiefNineteenComponent {
             for (const project of this.projects) {
               project.clicked = false;
             }
-          }, 800);
+          }, 1500);
         }
       }
     }

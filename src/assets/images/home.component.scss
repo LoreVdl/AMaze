@@ -5,6 +5,10 @@
   cursor: pointer;
 }
 
+.test {
+  grid-column: 1 / span 1;
+}
+
 .border {
   border-bottom: 1px solid #fff;
   display: inline-block;
@@ -52,16 +56,6 @@
   img {
     width: 100%;
   }
-}
-
-.about-list {
-
-  // img {
-  //   clip-path: polygon(0% 0%, 0% 110%, 100% 100%, 100% 50%, 80% 40%, 80% 30%, 120% 24%, 100% 0%);
-  //   height: 100vh;
-  //   float: left;
-  //   shape-outside: polygon(0% 0%, 0% 110%, 100% 100%, 100% 50%, 80% 40%, 80% 30%, 120% 24%, 100% 0%);
-  // }
 }
 
 .framework {
@@ -138,6 +132,40 @@
     }
   }
 }
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  grid-column: 4 / span 22;
+
+  &__title {
+    @include extra-large;
+    color: #fff;
+    font-family: 'avenir';
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &__basket {
+    margin-top: 3vh;
+    width: 100%;
+  }
+
+  &__basket-one {
+    grid-column: 8 / span 2;
+  }
+
+  &__basket-two {
+    grid-column: 14 / span 2;
+  }
+
+  &__basket-three {
+    grid-column: 20 / span 2;
+  }
+}
+
 
 .contact {
   display: flex;
@@ -234,11 +262,27 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 12%;
+    width: 100%;
+  }
 
-    img {
-      margin-right: 15px;
-      margin-left: 15px;
-    }
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+  }
+
+  &__facebook {
+    width: 60%;
+  }
+
+  &__insta {
+    width: 60%;
+  }
+
+  &__linked {
+    width: 60%;
   }
 
   &__detail {
@@ -281,6 +325,10 @@ textarea {
     height: auto;
   }
 
+  #contact {
+    height: auto;
+  }
+
   .small-nav {
     display: none;
   }
@@ -306,11 +354,55 @@ textarea {
     margin-top: 12vh;
 
     &__text {
-     font-size: 22px;
       color: #fff;
       font-family: 'avenir';
       margin-bottom: 0;
       padding: 4% 3% 8% 4%;
+    }
+  }
+
+  #aanbod {
+    height: auto;
+  }
+
+  .aanbod {
+    display: flex;
+    flex-direction: column;
+    grid-column: 5 / span 24;
+
+    &__bedrijven {
+      align-items: center;
+      border-right-width: 0;
+      border-bottom-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(to bottom, #006938 , #008424) 100% 1;
+      margin-top: 50px;
+      padding: 0 0 40px 0;
+      width: 100%;
+
+      li {
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+    }
+
+    &__particulieren {
+      align-items: center;
+      border-left-width: 0;
+      border-top-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(to bottom, #008424 , #00921a) 100% 1;
+      padding: 40px 0 0 0;
+      width: 100%;
+
+      li {
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+    }
+
+    &__title {
+      @include extra-grand;
     }
   }
 
@@ -328,19 +420,6 @@ textarea {
   .projects-list:first-child {
     margin-top: 12vh;
   }
-
-  .aanbod {
-    grid-column: 5 / span 24;
-
-    &__bedrijven {
-      padding-right: 20px;
-    }
-
-    &__particulieren {
-      padding-left: 20px;
-    }
-  }
-
 
   .contact {
     grid-column: 5 / span 24;
@@ -380,11 +459,22 @@ textarea {
 
     &__number {
       font-family: 'avenir';
-      font-size: 17px;
 
       p {
         margin-bottom: 20px;
       }
+    }
+
+    &__facebook {
+      width: 60%;
+    }
+
+    &__insta {
+      width: 60%;
+    }
+
+    &__linked {
+      width: 60%;
     }
 
     .textarea {
@@ -397,9 +487,179 @@ textarea {
       flex-direction: row;
       justify-content: center;
 
-      img {
-        width: 30%;
+      a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
       }
+    }
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 900px) and (orientation : portrait) {
+  #home {
+    align-items: baseline;
+  }
+
+  #projects {
+    height: auto;
+  }
+
+  .small-nav {
+    display: none;
+  }
+
+  .button-nav {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .logo {
+    height: 20vh;
+    grid-column: 8 / span 18;
+    margin-top: 80px;
+  }
+
+  .framework {
+    border: 1px solid #fff;
+    grid-column: 4 / span 26;
+    height: auto;
+    margin-top: 12vh;
+
+    &__text {
+      color: #fff;
+      font-family: 'avenir';
+      margin-bottom: 0;
+      padding: 4% 3% 8% 4%;
+    }
+  }
+
+  .shop {
+    grid-column: 5 / span 24;
+  }
+
+
+  .aanbod {
+    display: flex;
+    flex-direction: column;
+    grid-column: 5 / span 24;
+
+    &__bedrijven {
+      align-items: center;
+      border-right-width: 0;
+      border-bottom-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(to bottom, #006938 , #008424) 100% 1;
+      margin-top: 50px;
+      padding: 0 0 40px 0;
+      width: 100%;
+
+      li {
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+    }
+
+    &__particulieren {
+      align-items: center;
+      border-left-width: 0;
+      border-top-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(to bottom, #008424 , #00921a) 100% 1;
+      padding: 40px 0 0 0;
+      width: 100%;
+
+      li {
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+
+  .projects-list {
+    align-items: center;
+    grid-column: 10 / span 14;
+    margin-bottom: 7%;
+    margin-top: 7%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .projects-list:first-child {
+    margin-top: 12vh;
+  }
+
+  .contact {
+    grid-column: 5 / span 24;
+
+    &__error-state {
+      @include extra-medium;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      grid-column: 9 / span 16;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    &__mail {
+      margin-top: 1.0416666667%;
+    }
+  }
+
+  .gegevens {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &__email {
+      margin-top: 20px;
+    }
+
+    &__button {
+      height: 40px;
+    }
+
+    &__number {
+      font-family: 'avenir';
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__facebook {
+      width: 60%;
+    }
+
+    &__insta {
+      width: 60%;
+    }
+
+    &__linked {
+      width: 60%;
+    }
+
+    .textarea {
+      height:  200px;
+    }
+
+    &__socials {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
 
       a {
         align-items: center;
@@ -407,46 +667,7 @@ textarea {
         justify-content: center;
       }
     }
-
-
   }
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 900px) and (orientation : portrait) {
-  .small-nav {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .button-nav {
-    display: block;
-
-    img {
-      margin-left: 20px;
-      width: 10%;
-    }
-
-    p {
-      @include extra-grand;
-      font-family: 'avenir';
-      margin-bottom: 0;
-      margin-right: 20px;
-    }
-  }
-
-  .logo {
-    height: 20vh;
-    grid-column: 9 / span 16;
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-device-width : 900px) and (max-device-width : 1024px) and (orientation : portrait) {
-
 }
 
 

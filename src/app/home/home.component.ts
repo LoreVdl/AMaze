@@ -7,7 +7,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['../../assets/images/home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
@@ -57,6 +57,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   contactOffset: number = null;
   isScrolling = false;
   index = 1;
+  showBreak = false;
 
   @ViewChild('home', { static: true }) homeElement: ElementRef;
   @ViewChild('profile', { static: true }) profileElement: ElementRef;
@@ -77,6 +78,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       comment: new FormControl('', [Validators.required])
     });
+
+    this.showBreak = this.width > 900 && this.width < 1024;
 
     for (const project of this.projects) {
       if (this.width >= 901) {

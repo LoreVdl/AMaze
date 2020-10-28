@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72.95238" height="59.35296" viewBox="0 0 72.95238 59.35296">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="29.67648" x2="72.95238" y2="29.67648" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#006837"/>
+      <stop offset="0.2591" stop-color="#00773c"/>
+      <stop offset="0.7006" stop-color="#008b43"/>
+      <stop offset="1" stop-color="#009245"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="WEBSHOP">
+      <path class="cls-1" d="M72.31323,21.34557a2.984,2.984,0,0,0-2.457-1.22852H55.11392V18.65818a18.65818,18.65818,0,1,0-37.31635,0v1.45887H3.0553a3.09114,3.09114,0,0,0-2.457,1.22852A3.04778,3.04778,0,0,0,.13756,24.033l6.373,20.65452A20.827,20.827,0,0,0,26.39722,59.353H46.51427A20.827,20.827,0,0,0,66.401,44.68748L72.85071,24.033A3.07782,3.07782,0,0,0,72.31323,21.34557Zm-45.916-2.68739a10.05853,10.05853,0,1,1,20.11705,0v1.45887H26.39722Z"/>
+    </g>
+  </g>
+</svg>

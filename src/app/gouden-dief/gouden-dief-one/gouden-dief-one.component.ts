@@ -13,6 +13,7 @@ export class GoudenDiefOneComponent implements OnInit {
   loginForm: FormGroup;
   code: FormControl = new FormControl('');
   showErrorScreen = false;
+  showPopUp = true;
 
   constructor(private goudenDiefService: GoudenDiefService,
               private router: Router) { }
@@ -30,11 +31,12 @@ export class GoudenDiefOneComponent implements OnInit {
       this.router.navigate(['degoudendief/pageTwo']);
     } else {
       this.showErrorScreen = true;
+      this.goudenDiefService.playAudio();
       this.code.setValue('');
 
       setTimeout(() => {
         this.showErrorScreen = false;
-      }, 800);
+      }, 1500);
     }
   }
 

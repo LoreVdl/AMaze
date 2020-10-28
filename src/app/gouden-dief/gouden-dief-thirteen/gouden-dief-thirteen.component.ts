@@ -37,6 +37,7 @@ export class GoudenDiefThirteenComponent implements OnInit {
       this.router.navigate(['degoudendief/pageFourteen']);
     } else {
       this.showErrorScreen = true;
+      this.goudenDiefService.playAudio();
       this.code1.setValue('');
       this.code2.setValue('');
       this.code3.setValue('');
@@ -44,7 +45,7 @@ export class GoudenDiefThirteenComponent implements OnInit {
 
       setTimeout(() => {
         this.showErrorScreen = false;
-      }, 800);
+      }, 1500);
     }
   }
 }

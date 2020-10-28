@@ -32,7 +32,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
 
   private readonly answer3 = ['jupiter', 'planeten', 'planeet'];
 
-  private readonly answer4 = ['WO1', 'datum', '1914'];
+  private readonly answer4 = ['WO1', 'datum', '1914', '1912'];
 
   private readonly answer5 = ['regenboog', 'geel'];
 
@@ -124,9 +124,10 @@ export class GoudenDiefSeventeenComponent implements OnInit {
         break;
       default:
         this.showErrorScreen = true;
+        this.goudenDiefService.playAudio();
         setTimeout(() => {
           this.showErrorScreen = false;
-        }, 800);
+        }, 1500);
         break;
     }
 
