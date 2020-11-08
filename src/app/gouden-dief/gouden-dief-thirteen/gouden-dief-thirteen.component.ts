@@ -34,6 +34,7 @@ export class GoudenDiefThirteenComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageThirteen', code.toString());
 
     if (this.goudenDiefService.getInputCode('codePageThirteen') === this.goudenDiefService.codePageThirteen) {
+      this.goudenDiefService.playCorrectSong();
       this.router.navigate(['degoudendief/pageFourteen']);
     } else {
       this.showErrorScreen = true;

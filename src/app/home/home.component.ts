@@ -3,11 +3,13 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from './contact.service';
 import {ViewState} from './viewState.enum';
 import smoothscroll from 'smoothscroll-polyfill';
+import {Router} from '@angular/router';
+import {GoogleAnalyticsService} from "../shared/google-analytics.service";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['../../assets/images/home.component.scss']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       name: 'Next Escape',
       imageUrl: '../../assets/images/nextEscapeButton.svg',
       styling: '',
-      url: '/home'
+      url: '/projects/nxtEscape'
     },
     {
       name: 'De legende van Zandhoven',
@@ -58,6 +60,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   isScrolling = false;
   index = 1;
   showBreak = false;
+  showErrorShop = false;
 
   @ViewChild('home', { static: true }) homeElement: ElementRef;
   @ViewChild('profile', { static: true }) profileElement: ElementRef;
@@ -67,7 +70,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('contact', { static: true }) contactElement: ElementRef;
 
   constructor(private formbuilder: FormBuilder,
-              public contactService: ContactService) {
+              public contactService: ContactService,
+              private googleAnalyticsService: GoogleAnalyticsService) {
 
   }
 
@@ -79,7 +83,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       comment: new FormControl('', [Validators.required])
     });
 
-    this.showBreak = this.width > 900 && this.width < 1024;
+    this.showBreak = (this.width > 900 && this.width < 1024);
 
     for (const project of this.projects) {
       if (this.width >= 901) {
@@ -100,6 +104,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.index++;
       }
     }
+  }
+
+  toggleErrorShop(): void {
+    this.showErrorShop = true;
   }
 
   ngAfterViewInit() {
@@ -151,5 +159,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   getIconUrl(id: string): string {
     return '../../../assets/images/' + id + '.svg';
+  }
+
+  goToWebsiteEvent() {
+    this.googleAnalyticsService
+      .eventEmitter('go_to_webshop', 'shop', 'navigate', 'click', 10);
   }
 }

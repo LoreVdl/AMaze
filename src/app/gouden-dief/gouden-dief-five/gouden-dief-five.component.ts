@@ -180,6 +180,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
     if (this.clickedBoxes.sort().join(',') === this.goudenDiefService.codePageFive.sort().join(',')) {
       setTimeout(() => {
+        this.goudenDiefService.playCorrectSong();
         this.router.navigate(['degoudendief/pageSix']);
       }, 800);
     }

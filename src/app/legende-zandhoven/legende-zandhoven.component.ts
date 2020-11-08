@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GoogleAnalyticsService} from '../shared/google-analytics.service';
 declare var require: any;
 const FileSaver = require('file-saver');
 
@@ -9,7 +10,7 @@ const FileSaver = require('file-saver');
 })
 export class LegendeZandhovenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,12 @@ export class LegendeZandhovenComponent implements OnInit {
     const pdfUrl = './assets/dagboek.pdf';
     const pdfName = 'de_legende_van_zandhoven.pdf';
     FileSaver.saveAs(pdfUrl, pdfName);
+    this.downloadLegendeEvent();
+  }
+
+  downloadLegendeEvent() {
+    this.googleAnalyticsService
+      .eventEmitter('dowload_legende', 'legende', 'download', 'click', 10);
   }
 
 }

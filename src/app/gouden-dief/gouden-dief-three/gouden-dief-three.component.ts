@@ -26,6 +26,7 @@ export class GoudenDiefThreeComponent implements OnInit {
   submit(): void {
     this.goudenDiefService.setInputCode('codePageThree', this.code.value.toLowerCase());
     if (this.goudenDiefService.codePageThree.includes(this.goudenDiefService.getInputCode('codePageThree').toLowerCase())) {
+      this.goudenDiefService.playCorrectSong();
       this.router.navigate(['degoudendief/pageFour']);
     } else {
       this.showErrorScreen = true;

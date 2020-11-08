@@ -73,17 +73,34 @@
   </div>
 </div>
 
-<div class="body" id="shop" #shop>
-  <div class="l-wrap">
-    <div class="shop">
-      <p class="shop__title">Puzzels kopen? Eerst onze webshop vinden...</p>
-      <img src="../../assets/images/maze.svg">
+<div id="shop" #shop>
+  <div class="body" *ngIf="!showErrorShop">
+    <div class="l-wrap">
+      <div class="shop">
+        <p class="shop__title">Puzzels kopen? Eerst onze webshop vinden...</p>
+        <img src="../../assets/images/maze.svg">
+      </div>
+      <img class="shop__basket shop__basket-one clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()">
+      <a class="shop__basket-two clickable" href="https://www.a-maze-webshop.be/" target="_blank" (click)="goToWebsiteEvent()">
+        <img class="shop__basket" src="../../assets/images/webshop-basket.svg">
+      </a>
+      <img class="shop__basket shop__basket-three clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()">
+
+      <a href="https://www.a-maze-webshop.be/" target="_blank" class="shop-mobile__link shop-mobile__title-link" (click)="goToWebsiteEvent()">
+        <p class="shop-mobile__title">Bezoek onze webshop</p>
+      </a>
+      <a href="https://www.a-maze-webshop.be/" target="_blank" class="shop-mobile__link shop-mobile__image">
+        <img class="shop-mobile__basket" src="../../assets/images/webshop-basket.svg">
+      </a>
     </div>
-    <img class="shop__basket shop__basket-one" src="../../assets/images/webshop-basket.svg">
-    <img class="shop__basket shop__basket-two" src="../../assets/images/webshop-basket.svg">
-    <img class="shop__basket shop__basket-three" src="../../assets/images/webshop-basket.svg">
   </div>
 
+  <div class="body shop-error l-wrap" *ngIf="showErrorShop">
+    <p class="shop-error__text">Oeps... je ging de foute kant op.</p>
+    <a href="https://www.a-maze-webshop.be/" target="_blank" class="clickable shop-error__image">
+      <img src="../../assets/images/webshop-sign.svg">
+    </a>
+  </div>
 </div>
 
 <div class="body l-wrap"

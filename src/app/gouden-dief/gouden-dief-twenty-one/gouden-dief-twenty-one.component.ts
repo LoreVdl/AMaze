@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from '../../home/contact.service';
 import {Router} from '@angular/router';
 import {ViewState} from '../../home/viewState.enum';
+import {GoudenDiefService} from '../gouden-dief.service';
 
 @Component({
   selector: 'app-gouden-dief-twenty-one',
@@ -15,7 +16,8 @@ export class GoudenDiefTwentyOneComponent implements OnInit {
   readonly ViewState = ViewState;
 
   constructor(public contactService: ContactService,
-              private router: Router) { }
+              private router: Router,
+              private goudenDiefService: GoudenDiefService) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -29,6 +31,7 @@ export class GoudenDiefTwentyOneComponent implements OnInit {
   }
 
   naviagte(): void {
+    this.goudenDiefService.stopEndSong();
     this.router.navigate(['/']);
   }
 }

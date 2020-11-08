@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import {SharedModule} from './shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ContactService} from './home/contact.service';
+import {GoogleAnalyticsService} from './shared/google-analytics.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ContactService} from './home/contact.service';
     ReactiveFormsModule
   ],
   providers: [
-    ContactService
+    ContactService,
+    GoogleAnalyticsService
   ],
   bootstrap: [AppComponent]
 })

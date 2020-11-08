@@ -3,6 +3,7 @@
 @import "../../../assets/css/font-size";
 
 .body {
+  align-items: flex-start;
   background-image: url("src/assets/gouden-dief-icons/bg1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +13,14 @@
   width: 100vw;
 }
 
+.no-flex {
+  display: grid;
+}
+
+.l-wrap {
+  align-items: center;
+}
+
 .title {
   grid-column: 8 / span 18;
   margin-top: 20%;
@@ -19,7 +28,11 @@
 }
 
 .input {
-  margin-top: -110%;
+  margin-top: 30%;
+
+  &__label {
+    height: auto;
+  }
 }
 
 .pop-up {
@@ -34,14 +47,14 @@
     display: flex;
     flex-direction: column;
     grid-column: 11 / span 12;
-    height: 30vh;
+    height: auto;
     position: relative;
   }
 
   &__img {
+    height: 100%;
     position: absolute;
     top: 0;
-    width: 100%;
   }
 
   &__title {
@@ -54,26 +67,23 @@
 
   &__list {
     @include medium;
-    text-align: center;
-    z-index: 999;
+    text-align: left;
+    z-index: 1;
 
-    p {
+    li {
       font-family: 'hand';
-      list-style: none;
       margin-bottom: 0;
       line-height: 120%;
     }
   }
 
   &__button {
-    @include medium;
-    color: #fff;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
+    display: block;
+    margin: 3% 0 15% 0;
     padding: 0.5%;
-    z-index: 999;
+    text-align: center;
+    z-index: 2;
 
     img {
       width: 40%;

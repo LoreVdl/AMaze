@@ -29,13 +29,16 @@ export class GoudenDiefService {
 
   readonly codePageThirteen = '52';
 
-  readonly codePageFifteen = 'VTGMP';
+  readonly codePageFifteen = 'STRAL';
 
   readonly codePageSeventeen = 'true';
 
   readonly codePageNineteen = ['2', '4', '3', '7', '5', '8', '6', '1'];
 
   $inputCode: string;
+
+  audioEnd = new Audio();
+
 
   setInputCode(code: string, input: string) {
     this.cookieService.set(code, input, 7);
@@ -53,6 +56,23 @@ export class GoudenDiefService {
   playAudio() {
     const audio = new Audio();
     audio.src = '../../assets/sounds/sound_wrong.wav';
+    audio.load();
+    audio.play();
+  }
+
+  playEndSong() {
+    this.audioEnd.src = '../../assets/sounds/muziek_ontsnapt.wav';
+    this.audioEnd.load();
+    this.audioEnd.play();
+  }
+
+  stopEndSong() {
+    this.audioEnd.pause();
+  }
+
+  playCorrectSong() {
+    const audio = new Audio();
+    audio.src = '../../assets/sounds/sound_correct.wav';
     audio.load();
     audio.play();
   }

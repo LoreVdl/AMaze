@@ -94,6 +94,7 @@ export class GoudenDiefNineteenComponent {
         this.goudenDiefService.setInputCode('codePageNineteen', this.clickedBoxes.join(''));
 
         if (this.clickedBoxes.join('') === this.goudenDiefService.codePageNineteen.join('')) {
+          this.goudenDiefService.playEndSong();
           setTimeout(() => {
             this.router.navigate(['degoudendief/pageTwenty']);
           }, 800);

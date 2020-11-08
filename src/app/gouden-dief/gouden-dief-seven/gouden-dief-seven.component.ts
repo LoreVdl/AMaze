@@ -24,6 +24,7 @@ export class GoudenDiefSevenComponent {
       if (this.goudenDiefService.codePageSevenOne.join('') === this.goudenDiefService.getInputCode('codePageSeven') ||
         this.goudenDiefService.codePageSevenTwo.join('') === this.goudenDiefService.getInputCode('codePageSeven')) {
         setTimeout(() => {
+          this.goudenDiefService.playCorrectSong();
           this.router.navigate(['degoudendief/pageEighth']);
         }, 800);
       } else {

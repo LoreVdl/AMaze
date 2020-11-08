@@ -26,19 +26,19 @@ export class GoudenDiefSeventeenComponent implements OnInit {
     value: 0
   };
 
-  private readonly answer1 = ['kameel', 'dromedaris', 'koop'];
+  private readonly answer1 = ['dromedaris'];
 
-  private readonly answer2 = ['pop', 'spiegel'];
+  private readonly answer2 = ['spiegel'];
 
-  private readonly answer3 = ['jupiter', 'planeten', 'planeet'];
+  private readonly answer3 = ['jupiter'];
 
-  private readonly answer4 = ['WO1', 'datum', '1914', '1912'];
+  private readonly answer4 = ['datum', '1914', '1912'];
 
-  private readonly answer5 = ['regenboog', 'geel'];
+  private readonly answer5 = ['geel'];
 
-  private readonly answer6 = ['olympisch', 'zwart'];
+  private readonly answer6 = ['paars', 'zwart'];
 
-  private readonly answer7 = ['vorm', 'figuur', 'hoek', 'cirkel', 'plaats'];
+  private readonly answer7 = ['cirkel', 'zeshoek'];
 
   private answers = [this.answer1, this.answer2, this.answer3, this.answer4, this.answer5, this.answer6, this.answer7];
 
@@ -134,6 +134,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
     if (this.barMeter.value === 7) {
       this.goudenDiefService.setInputCode('codePageSeventeen', 'true');
       setTimeout(() => {
+        this.goudenDiefService.playCorrectSong();
         this.router.navigate(['degoudendief/pageEighteen']);
       }, 800);
     }
@@ -183,6 +184,6 @@ export class GoudenDiefSeventeenComponent implements OnInit {
         found++;
       }
     }
-    return found >= 2;
+    return found >= 1;
   }
 }

@@ -27,6 +27,7 @@ export class GoudenDiefNineComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageNine', this.code.value.toLowerCase());
 
     if (this.goudenDiefService.getInputCode('codePageNine') === this.goudenDiefService.codePageNine.toLowerCase()) {
+      this.goudenDiefService.playCorrectSong();
       this.router.navigate(['degoudendief/pageTen']);
     } else {
       this.showErrorScreen = true;

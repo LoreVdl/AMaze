@@ -2,21 +2,22 @@
 @import "src/assets/css/font-size";
 
 .body {
-    background-color: #000;
-    display: grid;
-    width: 100vw;
-    color: white;
-    font-family: "avenir";
+  align-items: center;
+  background-color: #000;
+  display: grid;
+}
+
+.container {
+  &__title {
+    @include extra-large;
+    color: #fff;
+    grid-column: 4 / span 22;
+    font-family: 'avenir';
+    margin-top: 20px;
   }
 
-  .container{
-      grid-column: 3/ span 25;
-
-      &__title {
-        @include large;
-      }
-
-    img {
-      width: 50%;
-    }
+  &__full-image {
+    grid-column: 4 / span 26;
+    width: 100%;
   }
+}

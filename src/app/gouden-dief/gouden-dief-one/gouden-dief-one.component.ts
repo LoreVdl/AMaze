@@ -28,6 +28,7 @@ export class GoudenDiefOneComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageOne', this.code.value);
 
     if (this.goudenDiefService.getInputCode('codePageOne') === this.goudenDiefService.codePageOne) {
+      this.goudenDiefService.playCorrectSong();
       this.router.navigate(['degoudendief/pageTwo']);
     } else {
       this.showErrorScreen = true;
