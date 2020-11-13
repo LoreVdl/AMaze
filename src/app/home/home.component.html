@@ -6,7 +6,7 @@
     (scroll)="scroll($event)">
   </app-hamburger-menu>
   <div class="twelve-col-grid logo">
-    <img src="../../../assets/images/logo.svg" />
+    <img src="../../../assets/images/logo.svg" alt="logo of A Maze" />
   </div>
 
   <div class="twelve-col-grid button-nav">
@@ -47,7 +47,7 @@
       [ngStyle]="{ 'grid-column': project.styling }"
       [ngClass]="{ clickable: !last }"
     >
-      <img src="{{ project.imageUrl }}" [routerLink]="project.url" />
+      <img src="{{ project.imageUrl }}" [routerLink]="project.url" alt="logo of project" />
     </div>
   </div>
 </div>
@@ -78,27 +78,27 @@
     <div class="l-wrap">
       <div class="shop">
         <p class="shop__title">Puzzels kopen? Eerst onze webshop vinden...</p>
-        <img src="../../assets/images/maze.svg">
+        <img src="../../assets/images/maze.svg" alt="image of a maze">
       </div>
-      <img class="shop__basket shop__basket-one clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()">
-      <a class="shop__basket-two clickable" href="https://www.a-maze-webshop.be/" target="_blank" (click)="goToWebsiteEvent()">
-        <img class="shop__basket" src="../../assets/images/webshop-basket.svg">
+      <img class="shop__basket shop__basket-one clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()" alt="image of a basket">
+      <a class="shop__basket-two clickable" href="https://www.a-maze-webshop.be/" target="_blank" rel="noopener" (click)="goToWebsiteEvent()">
+        <img class="shop__basket" src="../../assets/images/webshop-basket.svg" alt="image of a basket">
       </a>
-      <img class="shop__basket shop__basket-three clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()">
+      <img class="shop__basket shop__basket-three clickable" src="../../assets/images/webshop-basket.svg" (click)="toggleErrorShop()" alt="image of a basket">
 
-      <a href="https://www.a-maze-webshop.be/" target="_blank" class="shop-mobile__link shop-mobile__title-link" (click)="goToWebsiteEvent()">
+      <a href="https://www.a-maze-webshop.be/" target="_blank" rel="noopener" class="shop-mobile__link shop-mobile__title-link" (click)="goToWebsiteEvent()">
         <p class="shop-mobile__title">Bezoek onze webshop</p>
       </a>
-      <a href="https://www.a-maze-webshop.be/" target="_blank" class="shop-mobile__link shop-mobile__image">
-        <img class="shop-mobile__basket" src="../../assets/images/webshop-basket.svg">
+      <a href="https://www.a-maze-webshop.be/" target="_blank" rel="noopener" class="shop-mobile__link shop-mobile__image">
+        <img class="shop-mobile__basket" src="../../assets/images/webshop-basket.svg" alt="image of a basket">
       </a>
     </div>
   </div>
 
   <div class="body shop-error l-wrap" *ngIf="showErrorShop">
     <p class="shop-error__text">Oeps... je ging de foute kant op.</p>
-    <a href="https://www.a-maze-webshop.be/" target="_blank" class="clickable shop-error__image">
-      <img src="../../assets/images/webshop-sign.svg">
+    <a href="https://www.a-maze-webshop.be/" target="_blank" rel="noopener" class="clickable shop-error__image">
+      <img src="../../assets/images/webshop-sign.svg" alt="image from a sign to the webshop">
     </a>
   </div>
 </div>
@@ -127,18 +127,18 @@
           <div class="gegevens__socials">
             <a
               href="https://www.facebook.com/a.maze.experiences"
-              target="_blank"
-              ><img class="clickable gegevens__facebook" src="../../assets/images/facebook.svg"
+              target="_blank" rel="noopener"
+              ><img class="clickable gegevens__facebook" src="../../assets/images/facebook.svg" alt="facebook logo"
             /></a>
             <a
               href="https://www.instagram.com/a.maze.experiences/"
-              target="_blank"
-              ><img class="clickable gegevens__insta" src="../../assets/images/instagram.svg"
+              target="_blank" rel="noopener"
+              ><img class="clickable gegevens__insta" src="../../assets/images/instagram.svg" alt="instagram logo"
             /></a>
             <a
               href="https://www.linkedin.com/company/a-maze-experiences/"
-              target="_blank"
-              ><img class="clickable gegevens__linked" src="../../assets/images/linkedin.svg"
+              target="_blank" rel="noopener"
+              ><img class="clickable gegevens__linked" src="../../assets/images/linkedin.svg" alt="linkedin logo"
             /></a>
           </div>
         </div>
@@ -173,19 +173,19 @@
         </div>
         <div class="gegevens__socials">
           <a href="https://www.facebook.com/a.maze.experiences"
-             target="_blank"
+             target="_blank" rel="noopener"
              class="gegevens__item"
-            ><img class="clickable gegevens__facebook" src="../../assets/images/facebook.svg"
+            ><img class="clickable gegevens__facebook" src="../../assets/images/facebook.svg" alt="facebook logo"
           /></a>
           <a class="gegevens__item"
             href="https://www.instagram.com/a.maze.experiences/"
-            target="_blank"
-            ><img class="clickable gegevens__insta" src="../../assets/images/instagram.svg"
+            target="_blank" rel="noopener"
+            ><img class="clickable gegevens__insta" src="../../assets/images/instagram.svg" alt="instagram logo"
           /></a>
           <a class="gegevens__item"
             href="https://www.linkedin.com/company/a-maze-experiences/"
-            target="_blank"
-            ><img class="clickable gegevens__linked" src="../../assets/images/linkedin.svg"
+            target="_blank" rel="noopener"
+            ><img class="clickable gegevens__linked" src="../../assets/images/linkedin.svg" alt="linkedin logo"
           /></a>
         </div>
       </div>
@@ -226,6 +226,6 @@
   </div>
 
   <div class="contact__error-state" *ngSwitchCase="ViewState.Loading">
-    <img src="../../assets/images/zandloper.svg" class="contact__loading">
+    <img src="../../assets/images/zandloper.svg" class="contact__loading" alt="image zandloper">
   </div>
 </div>
