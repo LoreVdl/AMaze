@@ -62,6 +62,8 @@ export class GoudenDiefSeventeenComponent implements OnInit {
   };
 
   ngOnInit() {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadErrorAudio();
     this.loginForm = new FormGroup({
       code: this.code
     });
@@ -124,7 +126,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
         break;
       default:
         this.showErrorScreen = true;
-        this.goudenDiefService.playAudio();
+        this.goudenDiefService.playErrorAudio();
         setTimeout(() => {
           this.showErrorScreen = false;
         }, 1500);
@@ -134,7 +136,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
     if (this.barMeter.value === 7) {
       this.goudenDiefService.setInputCode('codePageSeventeen', 'true');
       setTimeout(() => {
-        this.goudenDiefService.playCorrectSong();
+        this.goudenDiefService.playSuccessAudio();
         this.router.navigate(['degoudendief/pageEighteen']);
       }, 800);
     }

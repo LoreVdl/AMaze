@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
   templateUrl: './gouden-dief-seven.component.html',
   styleUrls: ['./gouden-dief-seven.component.scss']
 })
-export class GoudenDiefSevenComponent {
+export class GoudenDiefSevenComponent implements OnInit {
 
   showErrorScreen = false;
 
@@ -16,20 +16,27 @@ export class GoudenDiefSevenComponent {
   constructor(private goudenDiefService: GoudenDiefService,
               private router: Router) { }
 
+  ngOnInit(): void {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadErrorAudio();
+    this.goudenDiefService.loadWaterfallsAudio();
+  }
+
   clickButton(code: string) {
-    this.playAudio();
+    this.goudenDiefService.loadWaterfallsAudio();
+    this.goudenDiefService.playWaterfallsAudio();
     this.inputCode.push(code);
     if (this.inputCode.length === 10) {
       this.goudenDiefService.setInputCode('codePageSeven', this.inputCode.join(''));
       if (this.goudenDiefService.codePageSevenOne.join('') === this.goudenDiefService.getInputCode('codePageSeven') ||
         this.goudenDiefService.codePageSevenTwo.join('') === this.goudenDiefService.getInputCode('codePageSeven')) {
         setTimeout(() => {
-          this.goudenDiefService.playCorrectSong();
+          this.goudenDiefService.playSuccessAudio();
           this.router.navigate(['degoudendief/pageEighth']);
         }, 800);
       } else {
         this.showErrorScreen = true;
-        this.goudenDiefService.playAudio();
+        this.goudenDiefService.playErrorAudio();
         this.inputCode = [];
 
         setTimeout(() => {
@@ -37,12 +44,5 @@ export class GoudenDiefSevenComponent {
         }, 1500);
       }
     }
-  }
-
-  private playAudio() {
-    const audio = new Audio();
-    audio.src = '../../assets/sounds/sound_water_falls.wav';
-    audio.load();
-    audio.play();
   }
 }

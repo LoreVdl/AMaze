@@ -155,6 +155,8 @@ export class GoudenDiefFiveComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadSnakeAudio();
     this.loginForm = new FormGroup({
       code: this.code
     });
@@ -167,7 +169,8 @@ export class GoudenDiefFiveComponent implements OnInit {
 
   toggleBox(value): void {
     value.clicked = !value.clicked;
-    this.playAudio();
+    this.goudenDiefService.loadSnakeAudio();
+    this.goudenDiefService.playSnakeAudio();
 
     if (this.clickedBoxes.includes(value.name)) {
       const index = this.clickedBoxes.indexOf(value.name);
@@ -180,7 +183,7 @@ export class GoudenDiefFiveComponent implements OnInit {
 
     if (this.clickedBoxes.sort().join(',') === this.goudenDiefService.codePageFive.sort().join(',')) {
       setTimeout(() => {
-        this.goudenDiefService.playCorrectSong();
+        this.goudenDiefService.playSuccessAudio();
         this.router.navigate(['degoudendief/pageSix']);
       }, 800);
     }
@@ -200,12 +203,5 @@ export class GoudenDiefFiveComponent implements OnInit {
     } else {
       return '0.1px solid lightgray';
     }
-  }
-
-  private playAudio() {
-    const audio = new Audio();
-    audio.src = '../../assets/sounds/sound_alphabet_snake.wav';
-    audio.load();
-    audio.play();
   }
 }

@@ -17,6 +17,8 @@ export class GoudenDiefFifteenComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadErrorAudio();
     this.loginForm = new FormGroup({
       code: this.code
     });
@@ -26,11 +28,11 @@ export class GoudenDiefFifteenComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageFifteen', this.code.value.toLowerCase());
 
     if (this.goudenDiefService.getInputCode('codePageFifteen') === this.goudenDiefService.codePageFifteen.toLowerCase()) {
-      this.goudenDiefService.playCorrectSong();
+      this.goudenDiefService.playSuccessAudio();
       this.router.navigate(['degoudendief/pageSixteen']);
     } else {
       this.showErrorScreen = true;
-      this.goudenDiefService.playAudio();
+      this.goudenDiefService.playErrorAudio();
       this.code.setValue('');
 
       setTimeout(() => {

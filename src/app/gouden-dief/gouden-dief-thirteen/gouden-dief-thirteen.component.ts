@@ -21,6 +21,8 @@ export class GoudenDiefThirteenComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadErrorAudio();
     this.loginForm = new FormGroup({
       code1: this.code1,
       code2: this.code2,
@@ -34,11 +36,11 @@ export class GoudenDiefThirteenComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageThirteen', code.toString());
 
     if (this.goudenDiefService.getInputCode('codePageThirteen') === this.goudenDiefService.codePageThirteen) {
-      this.goudenDiefService.playCorrectSong();
+      this.goudenDiefService.playSuccessAudio();
       this.router.navigate(['degoudendief/pageFourteen']);
     } else {
       this.showErrorScreen = true;
-      this.goudenDiefService.playAudio();
+      this.goudenDiefService.playErrorAudio();
       this.code1.setValue('');
       this.code2.setValue('');
       this.code3.setValue('');

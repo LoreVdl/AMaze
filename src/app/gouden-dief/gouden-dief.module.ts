@@ -23,6 +23,7 @@ import { GoudenDiefEighteenComponent } from './gouden-dief-eighteen/gouden-dief-
 import { GoudenDiefNineteenComponent } from './gouden-dief-nineteen/gouden-dief-nineteen.component';
 import { GoudenDiefTwentyComponent } from './gouden-dief-twenty/gouden-dief-twenty.component';
 import { GoudenDiefTwentyOneComponent } from './gouden-dief-twenty-one/gouden-dief-twenty-one.component';
+import { TipsComponent } from './tips/tips.component';
 
 
 
@@ -48,7 +49,8 @@ import { GoudenDiefTwentyOneComponent } from './gouden-dief-twenty-one/gouden-di
     GoudenDiefEighteenComponent,
     GoudenDiefNineteenComponent,
     GoudenDiefTwentyComponent,
-    GoudenDiefTwentyOneComponent
+    GoudenDiefTwentyOneComponent,
+    TipsComponent
   ],
     imports: [
         CommonModule,

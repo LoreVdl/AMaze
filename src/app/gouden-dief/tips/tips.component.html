@@ -1,0 +1,21 @@
+<div class="body l-wrap">
+  <div class="puzzle" *ngFor="let puzzle of puzzles">
+    <p class="puzzle__title">{{puzzle.title}}</p>
+    <div class="tips" *ngFor="let tip of puzzle.tips; let i=index">
+      <div class="tips__title-container" [ngClass]="{'tips__title-container-black': tip.canShow}">
+        <p class="tips__title">Tip {{i+1}}</p>
+        <div class="tips__arrow clickable" (click)="toggleArrow(tip)">
+          <img class="tips__image" src="../../../assets/gouden-dief-icons/dropdown_arrow.svg" *ngIf="!tip.canShow">
+          <img class="tips__image-black" src="../../../assets/gouden-dief-icons/dropdown_arrow_black.svg" *ngIf="tip.canShow">
+        </div>
+      </div>
+
+      <div class="tips__description" *ngIf="tip.canShow">{{tip.description}}</div>
+    </div>
+  </div>
+
+  <div class="text">
+    <p>Nog steeds de weg kwijt?</p>
+    <p>Stuur een berichtje naar <a href="mailto:help.degoudendief@a-maze.be">help.degoudendief@a-maze.be</a> en we helpen je graag verder!</p>
+  </div>
+</div>

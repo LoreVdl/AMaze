@@ -31,7 +31,7 @@ export class GoudenDiefTwentyOneComponent implements OnInit {
   }
 
   naviagte(): void {
-    this.goudenDiefService.stopEndSong();
+    this.goudenDiefService.stopEndAudio();
     this.router.navigate(['/']);
   }
 }

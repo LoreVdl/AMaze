@@ -28,6 +28,10 @@
   @include fluid-font(15px, 40px);
 }
 
+@mixin extra-small {
+  @include fluid-font(15px, 35px);
+}
+
 @mixin small {
   @include fluid-font(8px, 20px);
 }

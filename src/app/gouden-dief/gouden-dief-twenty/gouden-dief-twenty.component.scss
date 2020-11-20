@@ -1,9 +1,18 @@
+@import "../../../assets/css/fonts";
+@import "../../../assets/css/font-size";
+
 .body {
   background-image: url("src/assets/gouden-dief-icons/bg_text-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   line-height: 600%;
   width: 100vw;
+}
+
+@media only screen and (max-device-height : 700px) {
+  .text-container {
+    line-height: 220%;
+  }
 }

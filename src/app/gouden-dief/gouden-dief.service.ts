@@ -37,8 +37,12 @@ export class GoudenDiefService {
 
   $inputCode: string;
 
-  audioEnd = new Audio();
-
+  endAudio = new Audio();
+  errorAudio = new Audio();
+  successAudio = new Audio();
+  snakeAudio = new Audio();
+  waterfallsAudio = new Audio();
+  buttonAudio = new Audio();
 
   setInputCode(code: string, input: string) {
     this.cookieService.set(code, input, 7);
@@ -53,27 +57,60 @@ export class GoudenDiefService {
     }
   }
 
-  playAudio() {
-    const audio = new Audio();
-    audio.src = '../../assets/sounds/sound_wrong.wav';
-    audio.load();
-    audio.play();
+  loadErrorAudio() {
+    this.errorAudio.src = '../../assets/sounds/sound_wrong.wav';
+    this.errorAudio.load();
   }
 
-  playEndSong() {
-    this.audioEnd.src = '../../assets/sounds/muziek_ontsnapt.wav';
-    this.audioEnd.load();
-    this.audioEnd.play();
+  playErrorAudio() {
+    this.errorAudio.play();
   }
 
-  stopEndSong() {
-    this.audioEnd.pause();
+  loadEndAudio() {
+    this.endAudio.src = '../../assets/sounds/muziek_ontsnapt.wav';
   }
 
-  playCorrectSong() {
-    const audio = new Audio();
-    audio.src = '../../assets/sounds/sound_correct.wav';
-    audio.load();
-    audio.play();
+  playEndAudio() {
+    this.endAudio.play();
+  }
+
+  stopEndAudio() {
+    this.endAudio.pause();
+  }
+
+  loadSuccessAudio() {
+    this.successAudio.src = '../../assets/sounds/sound_correct.wav';
+    this.successAudio.load();
+  }
+
+  playSuccessAudio() {
+    this.successAudio.play();
+  }
+
+  loadSnakeAudio() {
+    this.snakeAudio.src = '../../assets/sounds/sound_alphabet_snake.wav';
+    this.snakeAudio.load();
+  }
+
+  playSnakeAudio() {
+    this.snakeAudio.play();
+  }
+
+  loadWaterfallsAudio() {
+    this.waterfallsAudio.src = '../../assets/sounds/sound_water_falls.wav';
+    this.waterfallsAudio.load();
+  }
+
+  playWaterfallsAudio() {
+    this.waterfallsAudio.play();
+  }
+
+  loadButtonAudio() {
+    this.buttonAudio.src = '../../assets/sounds/sound_the_end.wav';
+    this.buttonAudio.load();
+  }
+
+  playButtonAudio() {
+    this.buttonAudio.play();
   }
 }

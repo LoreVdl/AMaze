@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {GoudenDiefService} from '../gouden-dief.service';
 
@@ -7,7 +7,7 @@ import {GoudenDiefService} from '../gouden-dief.service';
   templateUrl: './gouden-dief-nineteen.component.html',
   styleUrls: ['./gouden-dief-nineteen.component.scss']
 })
-export class GoudenDiefNineteenComponent {
+export class GoudenDiefNineteenComponent implements OnInit{
 
   constructor(private router: Router,
               private goudenDiefService: GoudenDiefService) {
@@ -75,6 +75,12 @@ export class GoudenDiefNineteenComponent {
     }
   ];
 
+  ngOnInit(): void {
+    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadButtonAudio();
+    this.goudenDiefService.loadEndAudio();
+  }
+
   getImage(value): string {
     if (value.clicked) {
       return '../../assets/gouden-dief-icons/' + value.name + '_A.svg';
@@ -85,7 +91,8 @@ export class GoudenDiefNineteenComponent {
 
   clickButton(value): void {
     if (!value.clicked) {
-      this.playAudio();
+      this.goudenDiefService.loadButtonAudio();
+      this.goudenDiefService.playButtonAudio();
       this.clickedBoxes.push(value.value);
 
       value.clicked = true;
@@ -94,13 +101,13 @@ export class GoudenDiefNineteenComponent {
         this.goudenDiefService.setInputCode('codePageNineteen', this.clickedBoxes.join(''));
 
         if (this.clickedBoxes.join('') === this.goudenDiefService.codePageNineteen.join('')) {
-          this.goudenDiefService.playEndSong();
+          this.goudenDiefService.playEndAudio();
           setTimeout(() => {
             this.router.navigate(['degoudendief/pageTwenty']);
           }, 800);
         } else {
           this.showErrorScreen = true;
-          this.goudenDiefService.playAudio();
+          this.goudenDiefService.playSuccessAudio();
           this.clickedBoxes = [];
 
           setTimeout(() => {
@@ -112,12 +119,5 @@ export class GoudenDiefNineteenComponent {
         }
       }
     }
-  }
-
-  private playAudio() {
-    const audio = new Audio();
-    audio.src = '../../assets/sounds/sound_the_end.wav';
-    audio.load();
-    audio.play();
   }
 }
