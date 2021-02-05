@@ -47,10 +47,12 @@
   }
 
   &__image {
+    height: 3%;
     width: 3%;
   }
 
   &__image-black {
+    height: 3%;
     width: 1.5%;
   }
 
@@ -62,11 +64,31 @@
 }
 
 .text {
+   @include extra-med;
+   color: #fff;
+   font-family: 'avenir';
+   grid-column: 9 / span 16;
+   margin: 10% 0;
+
+   a {
+     color: #fff;
+   }
+ }
+
+.important {
   @include extra-med;
   color: #fff;
   font-family: 'avenir';
   grid-column: 9 / span 16;
-  margin: 10% 0;
+  margin: 10% 0 0 0;
+}
+
+.text-one {
+  @include extra-med;
+  color: #fff;
+  font-family: 'avenir';
+  grid-column: 9 / span 16;
+  margin: 10% 0 0 0;
 
   a {
     color: #fff;

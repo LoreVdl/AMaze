@@ -1,9 +1,24 @@
 <div class="body l-wrap">
+  <div class="important">VOOR WIE TWIJFELT: HET INTERNET IS EEN TOEGESTAAN HULPMIDDEL</div>
+  <div class="text-one">
+    <p>TIP 1: Een klein duwtje in de juiste richting.</p>
+    <p>TIP 2: De werking van de puzzel wordt uitgelegd en er wordt beschreven wat je moet doen.</p>
+    <p>TIP 3: Als het je het na de twee vorige tips nog steeds niet begrijpt, geven we jou het antwoord zodat je verder kan.</p>
+  </div>
+
   <div class="puzzle" *ngFor="let puzzle of puzzles">
     <p class="puzzle__title">{{puzzle.title}}</p>
     <div class="tips" *ngFor="let tip of puzzle.tips; let i=index">
       <div class="tips__title-container" [ngClass]="{'tips__title-container-black': tip.canShow}">
-        <p class="tips__title">Tip {{i+1}}</p>
+        <ng-container *ngIf="puzzle.tips.length === 4">
+          <p class="tips__title" *ngIf="i === 0">Tip {{i+1}}</p>
+          <p class="tips__title" *ngIf="i === 1">Tip {{i+1}}.1</p>
+          <p class="tips__title" *ngIf="i === 2">Tip {{i}}.2</p>
+          <p class="tips__title" *ngIf="i === 3">Tip {{i}}</p>
+        </ng-container>
+        <ng-container *ngIf="puzzle.tips.length < 4">
+          <p class="tips__title">Tip {{i+1}}</p>
+        </ng-container>
         <div class="tips__arrow clickable" (click)="toggleArrow(tip)">
           <img class="tips__image" src="../../../assets/gouden-dief-icons/dropdown_arrow.svg" *ngIf="!tip.canShow">
           <img class="tips__image-black" src="../../../assets/gouden-dief-icons/dropdown_arrow_black.svg" *ngIf="tip.canShow">

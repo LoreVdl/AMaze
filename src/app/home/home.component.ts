@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       name: 'Next Escape',
       imageUrl: '../../assets/images/nextEscapeButton.svg',
       styling: '',
-      url: '/projects/nxtEscape'
+      url: '/home'
     },
     {
       name: 'De legende van Zandhoven',

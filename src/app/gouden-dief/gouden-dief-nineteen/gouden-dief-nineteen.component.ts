@@ -76,7 +76,7 @@ export class GoudenDiefNineteenComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    this.goudenDiefService.loadSuccessAudio();
+    this.goudenDiefService.loadErrorAudio();
     this.goudenDiefService.loadButtonAudio();
     this.goudenDiefService.loadEndAudio();
   }
@@ -107,7 +107,7 @@ export class GoudenDiefNineteenComponent implements OnInit{
           }, 800);
         } else {
           this.showErrorScreen = true;
-          this.goudenDiefService.playSuccessAudio();
+          this.goudenDiefService.playErrorAudio();
           this.clickedBoxes = [];
 
           setTimeout(() => {

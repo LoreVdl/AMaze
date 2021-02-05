@@ -68,7 +68,11 @@ export class TipsComponent {
       title: 'De kringloop van het water',
       tips: [
         {
-          description: 'De zeshoeken moeten zo in de (in stippenlijn omrande) figuur geplaatst worden dat er één doorlopende kring ontstaat',
+          description: 'Om deze kamer op te lossen heb je de figuur op het extra blad nodig',
+          canShow: false
+        },
+        {
+          description: 'De zeshoeken moeten zo in de figuur geplaatst worden dat er één doorlopende kring ontstaat',
           canShow: false
         },
         {
@@ -86,11 +90,15 @@ export class TipsComponent {
       title: 'Vogels en vlaggen',
       tips: [
         {
-          description: 'Elke vogel verbergt een vlag in zijn veren',
+          description: 'Elke vogel verbergt een vlag van een land in zijn veren',
           canShow: false
         },
         {
-          description: 'Verbind de juiste wetenschappelijke naam van elke vogel (links) met de juiste vertaling van het woord vleugel (rechts) van de taal die in dat land gesproken word',
+          description: 'Verbind de juiste wetenschappelijke naam van elke vogel (links) met de juiste vertaling van het woord vleugel (rechts) aan de hand van de taal die in dat land gesproken wordt',
+          canShow: false
+        },
+        {
+          description: 'Wanneer je alle vogels met de juiste vertaling van het woord vleugel verbind, maak je een woord van de letters op de kruispunten',
           canShow: false
         },
         {
@@ -122,7 +130,11 @@ export class TipsComponent {
       title: 'De juiste balans',
       tips: [
         {
-          description: 'Bereken de waarde van de verschillende voorwerpen aan de hand de kleine weegschalen die je terugvindt op de postkaarten',
+          description: 'Bereken de waarde van de verschillende voorwerpen in de weegschalen aan de hand van de kleine weegschalen die je terugvindt doorheen de postkaarten',
+          canShow: false
+        },
+        {
+          description: 'De waarden van de diamant en van de fles zijn al gegeven en staan geschreven op de postkaarten, aan de hand van die waarden kan je de andere berekenen',
           canShow: false
         },
         {
@@ -130,7 +142,7 @@ export class TipsComponent {
           canShow: false
         },
         {
-          description: 'Om de balans in evenwicht te brengen zorg je dat je in totaal een waarde van 52 in de weegschaal legt',
+          description: 'Om de balans in evenwicht te brengen zorg je dat je in totaal een waarde van 52 in de weegschaal legt, zoals 8 diamanten en 1 schaal',
           canShow: false
         }
       ]
@@ -180,7 +192,7 @@ export class TipsComponent {
           canShow: false
         },
         {
-          description: 'De uitweg vind je door volgorde aan te duiden waarin je de puzzels bent tegengekomen tijdens het spel',
+          description: 'De uitweg vind je door de volgorde aan te duiden waarin je de puzzels bent tegengekomen tijdens het spel',
           canShow: false
         },
         {
