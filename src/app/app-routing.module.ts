@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'projects',
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
+  {
+    path: 'webshop',
+    loadChildren: () => import('./webshop/webshop.module').then(m => m.WebshopModule)
+  },
   { path: 'delegendevanzandhoven', component: LegendeZandhovenComponent },
   { path: 'home', component: HomeComponent },
   { path: '',  redirectTo: '/home', pathMatch: 'full' }
