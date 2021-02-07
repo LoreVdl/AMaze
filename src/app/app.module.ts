@@ -9,12 +9,14 @@ import {SharedModule} from './shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ContactService} from './home/contact.service';
 import {GoogleAnalyticsService} from './shared/google-analytics.service';
+import { BoomgaardComponent } from './boomgaard/boomgaard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LegendeZandhovenComponent,
-    HomeComponent
+    HomeComponent,
+    BoomgaardComponent
   ],
   imports: [
     BrowserModule,

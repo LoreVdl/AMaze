@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {LegendeZandhovenComponent} from './legende-zandhoven/legende-zandhoven.component';
 import {HomeComponent} from './home/home.component';
 import {CookieService} from 'ngx-cookie-service';
+import {BoomgaardComponent} from './boomgaard/boomgaard.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
   { path: 'delegendevanzandhoven', component: LegendeZandhovenComponent },
+  { path: 'plukdeappelflap', component: BoomgaardComponent },
   { path: 'home', component: HomeComponent },
   { path: '',  redirectTo: '/home', pathMatch: 'full' }
 ];

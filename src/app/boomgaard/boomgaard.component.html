@@ -1,0 +1,31 @@
+<div class="body">
+  <div class="l-wrap">
+    <article class="clock" (click)="togglePopUpMessage('clock')">
+      <div class="hours-container">
+        <div class="hours"></div>
+      </div>
+      <div class="minutes-container">
+        <div class="minutes"></div>
+      </div>
+      <div class="seconds-container">
+        <div class="seconds"></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="l-wrap pop-up" *ngIf="showPopUpMessage">
+    <div class="pop-up__content">
+
+      <form class="pop-up__input" [formGroup]="clockForm"  *ngIf="clickedItem === 'clock'">
+        <label class="pop-up__input__label">
+          <input class="pop-up__input__field" placeholder="hours" formControlName="hours">
+        </label>
+        <label class="pop-up__input__label">
+          <input class="pop-up__input__field" placeholder="minutes" formControlName="minutes">
+        </label>
+        <button (click)="submit()">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
