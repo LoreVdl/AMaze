@@ -32,7 +32,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
 
   private readonly answer3 = ['jupiter'];
 
-  private readonly answer4 = ['datum', '1914', '1912'];
+  private readonly answer4 = ['datum', '1914', '1912', 'WO1', 'WOI', 'wereldoorlog 1', 'wereldoorlog1'];
 
   private readonly answer5 = ['geel'];
 
@@ -137,7 +137,7 @@ export class GoudenDiefSeventeenComponent implements OnInit {
       this.goudenDiefService.setInputCode('codePageSeventeen', 'true');
       setTimeout(() => {
         this.goudenDiefService.playSuccessAudio();
-        this.router.navigate(['degoudendief/pageEighteen']);
+        this.router.navigate(['degoudendief/zeven-verschillen-antwoord']);
       }, 800);
     }
 

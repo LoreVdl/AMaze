@@ -32,7 +32,7 @@ export class GoudenDiefSevenComponent implements OnInit {
         this.goudenDiefService.codePageSevenTwo.join('') === this.goudenDiefService.getInputCode('codePageSeven')) {
         setTimeout(() => {
           this.goudenDiefService.playSuccessAudio();
-          this.router.navigate(['degoudendief/pageEighth']);
+          this.router.navigate(['degoudendief/kringloop-van-het-water-antwoord']);
         }, 800);
       } else {
         this.showErrorScreen = true;

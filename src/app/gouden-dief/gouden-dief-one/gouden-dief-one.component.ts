@@ -31,7 +31,7 @@ export class GoudenDiefOneComponent implements OnInit {
 
     if (this.goudenDiefService.getInputCode('codePageOne') === this.goudenDiefService.codePageOne) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageTwo']);
+      this.router.navigate(['degoudendief/qr-code-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

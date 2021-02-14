@@ -30,7 +30,7 @@ export class GoudenDiefNineComponent implements OnInit {
 
     if (this.goudenDiefService.getInputCode('codePageNine') === this.goudenDiefService.codePageNine.toLowerCase()) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageTen']);
+      this.router.navigate(['degoudendief/vogels-en-vlaggen-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

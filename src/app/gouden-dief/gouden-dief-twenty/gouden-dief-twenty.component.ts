@@ -14,7 +14,7 @@ export class GoudenDiefTwentyComponent {
 
   naviagte(): void {
     this.goToWebsiteEvent();
-    this.router.navigate(['degoudendief/pageTwentyOne']);
+    this.router.navigate(['degoudendief/contact']);
   }
 
   goToWebsiteEvent() {

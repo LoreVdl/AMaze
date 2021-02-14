@@ -28,132 +28,132 @@ import {TipsComponent} from './tips/tips.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pageOne'
+    redirectTo: 'qr-code'
   },
   {
     path: 'tips',
     component: TipsComponent
   },
   {
-    path: 'pageOne',
+    path: 'qr-code',
     component: GoudenDiefOneComponent
   },
   {
-    path: 'pageTwo',
+    path: 'qr-code-antwoord',
     component: GoudenDiefTwoComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageTwo'}
   },
   {
-    path: 'pageThree',
+    path: 'schilderij-zonder-naam',
     component: GoudenDiefThreeComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageThree'}
   },
   {
-    path: 'pageFour',
+    path: 'schilderij-zonder-naam-antwoord',
     component: GoudenDiefFourComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageFour'}
   },
   {
-    path: 'pageFive',
+    path: 'alfabetslang',
     component: GoudenDiefFiveComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageFive'}
   },
   {
-    path: 'pageSix',
+    path: 'alfabetslang-antwoord',
     component: GoudenDiefSixComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageSix'}
   },
   {
-    path: 'pageSeven',
+    path: 'kringloop-van-het-water',
     component: GoudenDiefSevenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageSeven'}
   },
   {
-    path: 'pageEighth',
+    path: 'kringloop-van-het-water-antwoord',
     component: GoudenDiefEighthComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageEighth'}
   },
   {
-    path: 'pageNine',
+    path: 'vogels-en-vlaggen',
     component: GoudenDiefNineComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageNine'}
   },
   {
-    path: 'pageTen',
+    path: 'vogels-en-vlaggen-antwoord',
     component: GoudenDiefTenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageTen'}
   },
   {
-    path: 'pageEleven',
+    path: 'vier-maal-het-juiste-pad',
     component: GoudenDiefElevenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageEleven'}
   },
   {
-    path: 'pageTwelve',
+    path: 'vier-maal-het-juiste-pad-antwoord',
     component: GoudenDiefTwelveComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageTwelve'}
   },
   {
-    path: 'pageThirteen',
+    path: 'juiste-balans',
     component: GoudenDiefThirteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageThirteen'}
   },
   {
-    path: 'pageFourteen',
+    path: 'juiste-balans-antwoord',
     component: GoudenDiefFourteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageFourteen'}
   },
   {
-    path: 'pageFifteen',
+    path: 'sterrenbeelden',
     component: GoudenDiefFifteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageFifteen'}
   },
   {
-    path: 'pageSixteen',
+    path: 'sterrenbeelden-antwoord',
     component: GoudenDiefSixteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageSixteen'}
   },
   {
-    path: 'pageSeventeen',
+    path: 'zeven-verschillen',
     component: GoudenDiefSeventeenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageSeventeen'}
   },
   {
-    path: 'pageEighteen',
+    path: 'zeven-verschillen-antwoord',
     component: GoudenDiefEighteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageEighteen'}
   },
   {
-    path: 'pageNineteen',
+    path: 'uitweg',
     component: GoudenDiefNineteenComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageNineteen'}
   },
   {
-    path: 'pageTwenty',
+    path: 'einde',
     component: GoudenDiefTwentyComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageTwenty'}
   },
   {
-    path: 'pageTwentyOne',
+    path: 'contact',
     component: GoudenDiefTwentyOneComponent,
     canActivate: [GoudenDiefLoginGuard],
     data: {page: 'pageTwentyOne'}

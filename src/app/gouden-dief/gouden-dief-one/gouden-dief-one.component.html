@@ -1,12 +1,15 @@
 <div class="body" [ngClass]="{'error': showErrorScreen, 'no-flex': !showPopUp}">
   <div class="l-wrap">
     <img class="title" src="../../../assets/gouden-dief-icons/logo.svg">
+
     <form class="input" [formGroup]="loginForm" (submit)="submit()" action="#">
       <img class="input__image" src="../../../assets/gouden-dief-icons/kader.svg">
       <label class="input__label">
         <input class="input__field" placeholder="startcode" formControlName="code">
       </label>
     </form>
+
+    <img src="../../../assets/gouden-dief-icons/arrow.svg" (click)="submit()" class="input__button">
   </div>
 
   <div class="pop-up l-wrap" *ngIf="showPopUp">
@@ -18,7 +21,6 @@
         <li>Gebruik Google Chrome voor het beste resultaat</li>
         <li>Zet het geluid van je computer aan</li>
         <li>Zet de helderheid van je scherm voldoende hoog</li>
-        <li>Gebruik ENTER om verder te gaan</li>
         <li>Je vooruitgang wordt 7 dagen bewaard</li>
       </ol>
 

@@ -29,7 +29,7 @@ export class GoudenDiefThreeComponent implements OnInit {
     this.goudenDiefService.setInputCode('codePageThree', this.code.value.toLowerCase());
     if (this.goudenDiefService.codePageThree.includes(this.goudenDiefService.getInputCode('codePageThree').toLowerCase())) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageFour']);
+      this.router.navigate(['degoudendief/schilderij-zonder-naam-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

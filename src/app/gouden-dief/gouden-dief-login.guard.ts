@@ -37,7 +37,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageThree']);
+          this.router.navigate(['/degoudendief/schilderij-zonder-naam']);
           return false;
         }
       case 'pageSix':
@@ -45,7 +45,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageFive']);
+          this.router.navigate(['/degoudendief/alfabetslang']);
           return false;
         }
       case 'pageEighth':
@@ -53,7 +53,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageSeven']);
+          this.router.navigate(['/degoudendief/kringloop-van-het-water']);
           return false;
         }
       case 'pageTen':
@@ -61,7 +61,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageNine']);
+          this.router.navigate(['/degoudendief/vogels-en-vlaggen']);
           return false;
         }
       case 'pageTwelve':
@@ -69,7 +69,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five && six) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageEleven']);
+          this.router.navigate(['/degoudendief/vier-maal-het-juiste-pad']);
           return false;
         }
       case 'pageFourteen':
@@ -77,7 +77,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five && six && seven) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageThirteen']);
+          this.router.navigate(['/degoudendief/juiste-balans']);
           return false;
         }
       case 'pageSixteen':
@@ -85,7 +85,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five && six && seven && eighth) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageFifteen']);
+          this.router.navigate(['/degoudendief/sterrenbeelden']);
           return false;
         }
       case 'pageEighteen':
@@ -93,7 +93,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five && six && seven && eighth && nine) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageSeventeen']);
+          this.router.navigate(['/degoudendief/zeven-verschillen']);
           return false;
         }
       case 'pageTwenty':
@@ -101,7 +101,7 @@ export class GoudenDiefLoginGuard implements CanActivate {
         if (one && two && three && four && five && six && seven && eighth && nine && ten) {
           return true;
         } else {
-          this.router.navigate(['/degoudendief/pageNineteen']);
+          this.router.navigate(['/degoudendief/uitweg']);
           return false;
         }
       default:

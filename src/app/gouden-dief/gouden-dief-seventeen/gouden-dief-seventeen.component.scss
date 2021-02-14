@@ -23,6 +23,11 @@
   &__field {
     @include medium;
   }
+
+  &__button {
+    grid-column: 23 / span 2;
+    margin-top: 30%;
+  }
 }
 
 .progression-meter {

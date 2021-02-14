@@ -11,7 +11,7 @@ export class GoudenDiefSixComponent {
   constructor(private router: Router) {}
 
   naviagte(): void {
-    this.router.navigate(['degoudendief/pageSeven']);
+    this.router.navigate(['degoudendief/kringloop-van-het-water']);
   }
 
 }

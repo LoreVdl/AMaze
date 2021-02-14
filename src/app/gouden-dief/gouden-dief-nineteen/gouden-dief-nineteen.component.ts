@@ -103,7 +103,7 @@ export class GoudenDiefNineteenComponent implements OnInit{
         if (this.clickedBoxes.join('') === this.goudenDiefService.codePageNineteen.join('')) {
           this.goudenDiefService.playEndAudio();
           setTimeout(() => {
-            this.router.navigate(['degoudendief/pageTwenty']);
+            this.router.navigate(['degoudendief/einde']);
           }, 800);
         } else {
           this.showErrorScreen = true;

@@ -29,7 +29,7 @@ export class GoudenDiefFifteenComponent implements OnInit {
 
     if (this.goudenDiefService.getInputCode('codePageFifteen') === this.goudenDiefService.codePageFifteen.toLowerCase()) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageSixteen']);
+      this.router.navigate(['degoudendief/sterrenbeelden-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

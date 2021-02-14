@@ -37,7 +37,7 @@ export class GoudenDiefThirteenComponent implements OnInit {
 
     if (this.goudenDiefService.getInputCode('codePageThirteen') === this.goudenDiefService.codePageThirteen) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageFourteen']);
+      this.router.navigate(['degoudendief/juiste-balans-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

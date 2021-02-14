@@ -11,6 +11,6 @@ export class GoudenDiefTwoComponent {
   constructor(private router: Router) {}
 
   naviagte(): void {
-    this.router.navigate(['degoudendief/pageThree']);
+    this.router.navigate(['degoudendief/schilderij-zonder-naam']);
   }
 }

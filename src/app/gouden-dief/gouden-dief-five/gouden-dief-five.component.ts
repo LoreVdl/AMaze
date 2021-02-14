@@ -184,7 +184,7 @@ export class GoudenDiefFiveComponent implements OnInit {
     if (this.clickedBoxes.sort().join(',') === this.goudenDiefService.codePageFive.sort().join(',')) {
       setTimeout(() => {
         this.goudenDiefService.playSuccessAudio();
-        this.router.navigate(['degoudendief/pageSix']);
+        this.router.navigate(['degoudendief/alfabetslang-antwoord']);
       }, 800);
     }
   }

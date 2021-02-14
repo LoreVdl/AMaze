@@ -30,7 +30,7 @@ export class GoudenDiefElevenComponent implements OnInit {
 
     if (this.goudenDiefService.getInputCode('codePageEleven') === this.goudenDiefService.codePageEleven) {
       this.goudenDiefService.playSuccessAudio();
-      this.router.navigate(['degoudendief/pageTwelve']);
+      this.router.navigate(['degoudendief/vier-maal-het-juiste-pad-antwoord']);
     } else {
       this.showErrorScreen = true;
       this.goudenDiefService.playErrorAudio();

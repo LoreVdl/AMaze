@@ -76,6 +76,12 @@
   &__image {
     width: 100%;
   }
+
+  &__button {
+    cursor: pointer;
+    grid-column: 22 / span 2;
+    margin-top: 80%;
+  }
 }
 
 .arrow {

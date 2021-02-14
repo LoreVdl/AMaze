@@ -11,7 +11,7 @@ export class GoudenDiefTwelveComponent {
   constructor(private router: Router) {}
 
   naviagte(): void {
-    this.router.navigate(['degoudendief/pageThirteen']);
+    this.router.navigate(['degoudendief/juiste-balans']);
   }
 
 }
