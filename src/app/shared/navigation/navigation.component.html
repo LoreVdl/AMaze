@@ -1,0 +1,17 @@
+<div class="nav">
+  <img src="../../../assets/images/logo.svg" class="nav__logo">
+  <div class="nav__items">
+    <ng-container *ngFor="let item of items">
+      <p class="nav__item"
+        *ngIf="item.id !== 'contact'"
+        (click)="scrollEvent.emit(item.id)"
+        [ngClass]="{'nav__item--active': item.active}">
+        {{item.id}}
+      </p>
+      <img src="../../../assets/images/contact.svg"
+           class="nav__item nav__image"
+           *ngIf="item.id === 'contact'"
+          [ngClass]="{'nav__item--active': item.active}">
+    </ng-container>
+  </div>
+</div>

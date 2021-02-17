@@ -9,12 +9,14 @@ import {SharedModule} from './shared/shared.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ContactService} from './home/contact.service';
 import {GoogleAnalyticsService} from './shared/google-analytics.service';
+import { StartComponent } from './start/start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LegendeZandhovenComponent,
-    HomeComponent
+    HomeComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {LegendeZandhovenComponent} from './legende-zandhoven/legende-zandhoven.component';
 import {HomeComponent} from './home/home.component';
 import {CookieService} from 'ngx-cookie-service';
+import {StartComponent} from './start/start.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   },
   { path: 'delegendevanzandhoven', component: LegendeZandhovenComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'start', component: StartComponent },
   { path: '',  redirectTo: '/home', pathMatch: 'full' }
 ];
 

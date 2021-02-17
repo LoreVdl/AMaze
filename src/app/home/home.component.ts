@@ -3,8 +3,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ContactService} from './contact.service';
 import {ViewState} from './viewState.enum';
 import smoothscroll from 'smoothscroll-polyfill';
-import {Router} from '@angular/router';
-import {GoogleAnalyticsService} from "../shared/google-analytics.service";
+import {GoogleAnalyticsService} from '../shared/google-analytics.service';
 
 @Component({
   selector: 'app-home',

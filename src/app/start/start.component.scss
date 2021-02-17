@@ -1,0 +1,23 @@
+*:focus {
+  outline:none !important
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.body {
+  align-items: center;
+  display: grid;
+  width: 100vw;
+}
+
+.nav {
+  grid-column: 1 / span 32;
+}
+
+.block {
+  background-color: yellow;
+  grid-column: 10 / span 14;
+  height: 100px;
+}
