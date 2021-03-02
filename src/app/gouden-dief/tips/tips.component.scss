@@ -1,5 +1,5 @@
-@import "src/assets/css/fonts";
-@import "src/assets/css/font-size";
+@import "~src/assets/css/fonts";
+@import "~src/assets/css/font-size";
 
 .body {
   background-color: #000;
@@ -59,8 +59,14 @@
   &__description {
     @include extra-small;
     background-color: #000;
+    margin-bottom: 0;
     padding: 10px 20px;
+    white-space: pre-line;
   }
+}
+
+.extra {
+  padding: 0;
 }
 
 .text {

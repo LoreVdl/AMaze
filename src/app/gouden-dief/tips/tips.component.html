@@ -16,6 +16,13 @@
           <p class="tips__title" *ngIf="i === 2">Tip {{i}}.2</p>
           <p class="tips__title" *ngIf="i === 3">Tip {{i}}</p>
         </ng-container>
+        <ng-container *ngIf="puzzle.tips.length === 5">
+          <p class="tips__title" *ngIf="i === 0">Tip {{i+1}}</p>
+          <p class="tips__title" *ngIf="i === 1">Tip {{i+1}}.1</p>
+          <p class="tips__title" *ngIf="i === 2">Tip {{i}}.2</p>
+          <p class="tips__title" *ngIf="i === 3">Tip {{i-1}}.3</p>
+          <p class="tips__title" *ngIf="i === 4">Tip {{i-1}}</p>
+        </ng-container>
         <ng-container *ngIf="puzzle.tips.length < 4">
           <p class="tips__title">Tip {{i+1}}</p>
         </ng-container>
@@ -25,7 +32,26 @@
         </div>
       </div>
 
-      <div class="tips__description" *ngIf="tip.canShow">{{tip.description}}</div>
+      <div class="tips__description extra" *ngIf="tip.canShow">
+        <p class="tips__description" >{{tip.description}}</p>
+
+        <ng-container *ngIf="tip.extra && tip.canShow">
+          <div class="tips" *ngFor="let extra of tip.extra">
+            <div class="tips__title-container" [ngClass]="{'tips__title-container-black': extra.canShow}">
+              <p class="tips__title">Waarde {{extra.name}}</p>
+
+              <div class="tips__arrow clickable" (click)="toggleExtra(extra)">
+                <img class="tips__image" src="../../../assets/gouden-dief-icons/dropdown_arrow.svg" *ngIf="!extra.canShow">
+                <img class="tips__image-black" src="../../../assets/gouden-dief-icons/dropdown_arrow_black.svg" *ngIf="extra.canShow">
+              </div>
+            </div>
+
+            <div class="tips__description" *ngIf="extra.canShow">
+              {{extra.description}}
+            </div>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
 
